@@ -1,10 +1,10 @@
-import { Globe2, SteeringWheel, Workflow } from "lucide-react";
+import { CarFront, Globe2, Workflow } from "lucide-react";
 
 import SectionHeading from "./SectionHeading";
 
 const services = [
   {
-    icon: SteeringWheel,
+    icon: CarFront,
     title: "Venda e arrendamento",
     description:
       "Veículos premium com planos flexíveis de aquisição, assinatura ou aluguer de curta e longa duração.",
