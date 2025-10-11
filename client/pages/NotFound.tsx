@@ -28,7 +28,7 @@ const NotFound = () => {
         </p>
         <div className="mt-8 flex justify-center">
           <Button asChild size="lg" className="rounded-full">
-            <a href="#inicio">
+            <a href="/">
               <ArrowLeft className="mr-2 size-5" />
               Voltar ao início
             </a>
