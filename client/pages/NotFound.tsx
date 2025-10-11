@@ -1,5 +1,8 @@
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,15 +15,27 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <section className="flex items-center justify-center px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-xl rounded-3xl border border-border bg-card/70 p-10 text-center shadow-xl shadow-primary/10 backdrop-blur">
+        <span className="inline-flex items-center justify-center rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-primary">
+          404
+        </span>
+        <h1 className="mt-6 text-3xl font-semibold text-foreground sm:text-4xl">
+          Página não encontrada
+        </h1>
+        <p className="mt-4 text-sm text-foreground/70">
+          O endereço que procurou não existe ou foi movido. Utilize o menu principal para navegar pelas secções da Frota Justo.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <Button asChild size="lg" className="rounded-full">
+            <a href="#inicio">
+              <ArrowLeft className="mr-2 size-5" />
+              Voltar ao início
+            </a>
+          </Button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
