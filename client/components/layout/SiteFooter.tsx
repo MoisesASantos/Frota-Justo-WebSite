@@ -44,12 +44,26 @@ const SiteFooter = () => {
           <ul className="space-y-3 text-foreground/70">
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-4 text-primary" />
-              <span>Dubai & Lisboa — atendimento global e remoto</span>
+              <span>
+                Frota Justo General Trading — Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai, Dubai Municipality
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="size-4 text-primary" />
-              <a href="tel:+351210000000" className="hover:text-foreground">
-                +351 21 000 0000
+              <a href="tel:+97142223766" className="hover:text-foreground">
+                +971 4 222 3766
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="size-4 text-primary" />
+              <a href="tel:+971507587620" className="hover:text-foreground">
+                +971 50 758 7620
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="size-4 text-primary" />
+              <a href="tel:949918673" className="hover:text-foreground">
+                949 918 673
               </a>
             </li>
             <li className="flex items-center gap-3">
