@@ -50,13 +50,23 @@ const SiteHeader = () => {
         <a
           href="#inicio"
           onClick={(event) => handleAnchorClick(event, "inicio")}
-          className="text-lg font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-3 text-lg font-semibold tracking-tight text-foreground"
           aria-label="Frota Justo início"
         >
-          <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            Frota
-          </span>{" "}
-          <span className="text-foreground">Justo</span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F471a4560c0df4df4b94750944924100c?format=webp&width=200"
+            alt="Logo Frota Justo"
+            className="h-10 w-auto"
+            loading="eager"
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Frota Justo
+            </span>
+            <span className="text-xs font-medium uppercase tracking-[0.25em] text-foreground/60">
+              General Trading LLC Dubai
+            </span>
+          </div>
         </a>
 
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
