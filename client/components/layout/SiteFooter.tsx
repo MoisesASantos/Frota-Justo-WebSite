@@ -15,9 +15,19 @@ const SiteFooter = () => {
     <footer className="mt-24 bg-primary/5 text-sm text-foreground/80">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-14 md:grid-cols-[1.4fr,1fr,1fr] md:px-8">
         <div className="space-y-5">
-          <div className="inline-flex items-center gap-2">
-            <span className="text-xl font-semibold text-primary">Frota</span>
-            <span className="text-xl font-semibold text-foreground">Justo</span>
+          <div className="flex items-center gap-3">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F471a4560c0df4df4b94750944924100c?format=webp&width=200"
+              alt="Logo Frota Justo"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <div className="leading-tight">
+              <span className="text-xl font-semibold text-primary">Grupo Frota Justo</span>
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-foreground/60">
+                General Trading LLC Dubai
+              </p>
+            </div>
           </div>
           <p className="max-w-lg text-base text-foreground/70">
             Mobilidade premium e experiências completas em Dubai. Da escolha do veículo ao planeamento da viagem, a Frota Justo acompanha cada detalhe com confiança e transparência.
