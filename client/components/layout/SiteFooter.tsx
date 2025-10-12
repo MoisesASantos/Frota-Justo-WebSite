@@ -17,7 +17,7 @@ const SiteFooter = () => {
         <div className="space-y-5">
           <div className="flex items-center gap-3">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F471a4560c0df4df4b94750944924100c?format=webp&width=200"
+              src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F89aaa8c9dce848a289b0978d548d685e?format=webp&width=240"
               alt="Logo Frota Justo"
               className="h-12 w-auto"
               loading="lazy"
