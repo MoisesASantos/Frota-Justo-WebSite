@@ -139,10 +139,28 @@ const ContactSection = () => {
               Preferia falar agora? Ligue-nos ou envie uma mensagem via WhatsApp. Estamos disponíveis em horários alargados para apoiar o seu projecto.
             </p>
             <div className="space-y-4 text-sm text-foreground/80">
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 size-4 text-primary" />
+                <span>
+                  Frota Justo General Trading — Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai, Dubai Municipality
+                </span>
+              </div>
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
-                <a href="tel:+351210000000" className="font-medium text-foreground hover:text-primary">
-                  +351 21 000 0000
+                <a href="tel:+97142223766" className="font-medium text-foreground hover:text-primary">
+                  +971 4 222 3766
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4 text-primary" />
+                <a href="tel:+971507587620" className="font-medium text-foreground hover:text-primary">
+                  +971 50 758 7620
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4 text-primary" />
+                <a href="tel:949918673" className="font-medium text-foreground hover:text-primary">
+                  949 918 673
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -159,7 +177,7 @@ const ContactSection = () => {
           </div>
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-sm text-foreground/75">
             <p>
-              Estamos presentes em Lisboa e Dubai para garantir assistência presencial e remota, com especialistas em mobilidade, lifestyle e viagens de luxo.
+              Equipa presente em Dubai para garantir acompanhamento presencial e remoto, com especialistas em mobilidade, lifestyle e viagens de luxo.
             </p>
           </div>
         </aside>
