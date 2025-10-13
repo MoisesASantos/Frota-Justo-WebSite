@@ -7,22 +7,26 @@ const vehicles = [
   {
     name: "Range Rover Sport 2024",
     category: "SUV de luxo",
-    image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Mercedes-Benz Classe S",
     category: "Sedan executivo",
-    image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Lamborghini Huracán EVO",
     category: "Super desportivo",
-    image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "BMW i7 Excellence",
     category: "Elétrico premium",
-    image: "https://images.unsplash.com/photo-1523983302122-62e63b48ef67?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1523983302122-62e63b48ef67?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

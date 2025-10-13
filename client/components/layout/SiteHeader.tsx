@@ -30,7 +30,10 @@ const SiteHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleAnchorClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
     event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -43,7 +46,9 @@ const SiteHeader = () => {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b border-border/60 transition-all",
-        isScrolled ? "bg-background/95 backdrop-blur-lg shadow-[0_12px_30px_-12px_rgba(15,30,84,0.35)]" : "bg-background/85 backdrop-blur",
+        isScrolled
+          ? "bg-background/95 backdrop-blur-lg shadow-[0_12px_30px_-12px_rgba(15,30,84,0.35)]"
+          : "bg-background/85 backdrop-blur",
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 md:px-8 md:py-5">
@@ -85,8 +90,15 @@ const SiteHeader = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button asChild size="lg" className="rounded-full px-6 shadow-lg shadow-primary/20">
-            <a href="#contactos" onClick={(event) => handleAnchorClick(event, "contactos")}>
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full px-6 shadow-lg shadow-primary/20"
+          >
+            <a
+              href="#contactos"
+              onClick={(event) => handleAnchorClick(event, "contactos")}
+            >
               Solicitar Orçamento
             </a>
           </Button>
@@ -120,7 +132,10 @@ const SiteHeader = () => {
             size="lg"
             className="mt-5 w-full rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30"
           >
-            <a href="#contactos" onClick={(event) => handleAnchorClick(event, "contactos")}>
+            <a
+              href="#contactos"
+              onClick={(event) => handleAnchorClick(event, "contactos")}
+            >
               Solicitar Orçamento
             </a>
           </Button>
