@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import FJLogoMark from "@/components/brand/FJLogoMark";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
@@ -54,7 +53,14 @@ const SiteHeader = () => {
           className="flex items-center gap-3 text-lg font-semibold tracking-tight text-foreground"
           aria-label="Frota Justo início"
         >
-          <FJLogoMark className="h-10 w-auto" />
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fdab3468c9fd3463a95a5b7151b5f935d?format=webp&width=256"
+              alt="Logotipo Frota Justo"
+              className="h-10 w-10 object-contain"
+              loading="eager"
+            />
+          </div>
           <div className="flex flex-col leading-tight">
             <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Frota Justo
