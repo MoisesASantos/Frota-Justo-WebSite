@@ -1,4 +1,3 @@
-import FJLogoMark from "@/components/brand/FJLogoMark";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const anchorItems = [
@@ -17,7 +16,14 @@ const SiteFooter = () => {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-14 md:grid-cols-[1.4fr,1fr,1fr] md:px-8">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
-            <FJLogoMark className="h-12 w-auto" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fdab3468c9fd3463a95a5b7151b5f935d?format=webp&width=256"
+                alt="Logotipo Frota Justo"
+                className="h-12 w-12 object-contain"
+                loading="lazy"
+              />
+            </div>
             <div className="leading-tight">
               <span className="text-xl font-semibold text-primary">Grupo Frota Justo</span>
               <p className="text-xs font-medium uppercase tracking-[0.3em] text-foreground/60">
