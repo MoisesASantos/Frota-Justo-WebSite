@@ -7,25 +7,21 @@ const vehicles = [
   {
     name: "Range Rover Sport 2024",
     category: "SUV de luxo",
-    price: "Desde 1.200€/semana",
     image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Mercedes-Benz Classe S",
     category: "Sedan executivo",
-    price: "Desde 950€/semana",
     image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Lamborghini Huracán EVO",
     category: "Super desportivo",
-    price: "Sob consulta",
     image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "BMW i7 Excellence",
     category: "Elétrico premium",
-    price: "Desde 880€/semana",
     image: "https://images.unsplash.com/photo-1523983302122-62e63b48ef67?auto=format&fit=crop&w=1200&q=80",
   },
 ];
@@ -64,8 +60,7 @@ const FleetSection = () => {
                     {vehicle.name}
                   </h3>
                 </div>
-                <div className="mt-auto flex items-center justify-between text-sm text-foreground/70">
-                  <span>{vehicle.price}</span>
+                <div className="mt-auto flex justify-end">
                   <Button
                     asChild
                     size="sm"
@@ -73,7 +68,7 @@ const FleetSection = () => {
                     className="rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
                     <a href="#contactos">
-                      Fazer connosco
+                      Saber mais
                       <ArrowUpRight className="ml-1.5 size-4" />
                     </a>
                   </Button>
