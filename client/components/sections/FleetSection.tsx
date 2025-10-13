@@ -67,12 +67,15 @@ const FleetSection = () => {
                 <div className="mt-auto flex items-center justify-between text-sm text-foreground/70">
                   <span>{vehicle.price}</span>
                   <Button
+                    asChild
                     size="sm"
                     variant="ghost"
                     className="rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
-                    Saber Mais
-                    <ArrowUpRight className="ml-1.5 size-4" />
+                    <a href="#contactos">
+                      Fazer connosco
+                      <ArrowUpRight className="ml-1.5 size-4" />
+                    </a>
                   </Button>
                 </div>
               </div>
