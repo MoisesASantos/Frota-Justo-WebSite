@@ -44,7 +44,7 @@ const FleetSection = () => {
           {vehicles.map((vehicle) => (
             <article
               key={vehicle.name}
-              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-card shadow-lg shadow-primary/5 transition-transform duration-300 hover:-translate-y-2"
+              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-card shadow-lg transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-2"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img

@@ -37,7 +37,7 @@ const AboutSection = () => {
             {pillars.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="flex items-start gap-4 rounded-2xl border border-border bg-card/50 p-5 shadow-sm shadow-primary/5 backdrop-blur"
+                className="flex items-start gap-4 rounded-2xl border border-border bg-card/50 p-5 shadow-sm transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] backdrop-blur"
               >
                 <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Icon className="size-6" />
