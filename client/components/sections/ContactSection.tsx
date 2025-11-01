@@ -60,12 +60,16 @@ const ContactSection = () => {
           <div className="mt-8 rounded-3xl border border-border bg-card p-8 shadow-xl shadow-primary/10">
             {isSubmitted && (
               <div className="mb-6 rounded-2xl border border-primary/40 bg-primary/10 p-4 text-sm text-primary">
-                Mensagem enviada com sucesso! Entraremos em contacto muito em breve.
+                Mensagem enviada com sucesso! Entraremos em contacto muito em
+                breve.
               </div>
             )}
             <form className="grid gap-5" onSubmit={handleSubmit}>
               <div className="grid gap-2">
-                <label htmlFor="name" className="text-sm font-medium text-foreground">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium text-foreground"
+                >
                   Nome completo
                 </label>
                 <Input
@@ -79,7 +83,10 @@ const ContactSection = () => {
               </div>
               <div className="grid gap-2 sm:grid-cols-2 sm:gap-5">
                 <div className="grid gap-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-foreground"
+                  >
                     Email
                   </label>
                   <Input
@@ -93,7 +100,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="phone"
+                    className="text-sm font-medium text-foreground"
+                  >
                     Telefone
                   </label>
                   <Input
@@ -107,7 +117,10 @@ const ContactSection = () => {
                 </div>
               </div>
               <div className="grid gap-2">
-                <label htmlFor="message" className="text-sm font-medium text-foreground">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-foreground"
+                >
                   Mensagem
                 </label>
                 <Textarea
@@ -136,24 +149,35 @@ const ContactSection = () => {
               Contacto directo
             </h3>
             <p className="text-sm text-foreground/70">
-              Preferia falar agora? Ligue-nos ou envie uma mensagem via WhatsApp. Estamos disponíveis em horários alargados para apoiar o seu projecto.
+              Preferia falar agora? Ligue-nos ou envie uma mensagem via
+              WhatsApp. Estamos disponíveis em horários alargados para apoiar o
+              seu projecto.
             </p>
             <div className="space-y-4 text-sm text-foreground/80">
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
-                <a href="tel:+244949918673" className="font-medium text-foreground hover:text-primary">
+                <a
+                  href="tel:+244949918673"
+                  className="font-medium text-foreground hover:text-primary"
+                >
                   +244 949 918 673
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
-                <a href="tel:+97142223766" className="font-medium text-foreground hover:text-primary">
+                <a
+                  href="tel:+97142223766"
+                  className="font-medium text-foreground hover:text-primary"
+                >
                   +971 4 222 3766
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
-                <a href="tel:+971507587620" className="font-medium text-foreground hover:text-primary">
+                <a
+                  href="tel:+971507587620"
+                  className="font-medium text-foreground hover:text-primary"
+                >
                   +971 50 758 7620
                 </a>
               </div>
@@ -161,28 +185,38 @@ const ContactSection = () => {
                 <MapPin className="mt-0.5 size-4 text-primary" />
                 <div className="space-y-2">
                   <span className="block">
-                    Frota Justo General Trading — Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai, Dubai Municipality
+                    Frota Justo General Trading — Doha Centre, 29, 40a Street,
+                    Al Muraqqabat, Deira, Dubai, Dubai Municipality
                   </span>
                   <span className="block">
-                    Jardins de Talatona — Rua do Mundo Verde, Condomínio Jardins de Talatona, Edifício A, APT 404, Talatona, Luanda, Luanda Province
+                    Jardins de Talatona — Rua do Mundo Verde, Condomínio Jardins
+                    de Talatona, Edifício A, APT 404, Talatona, Luanda, Luanda
+                    Province
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="size-4 text-primary" />
-                <a href="mailto:contacto@frotajusto.com" className="font-medium text-foreground hover:text-primary">
+                <a
+                  href="mailto:contacto@frotajusto.com"
+                  className="font-medium text-foreground hover:text-primary"
+                >
                   contacto@frotajusto.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="size-4 text-primary" />
-                <span>Hospitalidade imediata: todos os dias, 08h – 22h CET</span>
+                <span>
+                  Hospitalidade imediata: todos os dias, 08h – 22h CET
+                </span>
               </div>
             </div>
           </div>
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-sm text-foreground/75">
             <p>
-              Equipa presente em Dubai e Angola para garantir acompanhamento presencial e remoto, com especialistas em mobilidade, lifestyle e viagens de luxo.
+              Equipa presente em Dubai e Angola para garantir acompanhamento
+              presencial e remoto, com especialistas em mobilidade, lifestyle e
+              viagens de luxo.
             </p>
           </div>
         </aside>
