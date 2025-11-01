@@ -15,7 +15,7 @@ const FounderSection = () => {
           description="Fundador e CEO do Grupo Frota Justo"
         />
 
-        <div className="mt-12 grid gap-10 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+        <div className="mt-12 grid gap-10 md:grid-cols-[1.1fr,0.9fr] md:items-start">
           <div className="space-y-6 text-base leading-relaxed text-foreground/80">
             <p>
               António Lissimo Laurindo, amplamente reconhecido como Justo, é o
@@ -52,7 +52,7 @@ const FounderSection = () => {
               trabalho honesto.
             </p>
           </div>
-          <aside className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <div className="relative overflow-hidden rounded-[2.25rem] border border-primary/20 shadow-2xl shadow-primary/10">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F5dfc7ed3bc2e4215a92a048d42fce9d7?format=webp&width=800"
@@ -61,21 +61,21 @@ const FounderSection = () => {
                 loading="lazy"
               />
             </div>
-            <div className="relative overflow-hidden rounded-[2.25rem] border border-primary/20 bg-white/70 p-8 shadow-2xl shadow-primary/10 backdrop-blur">
+            <aside className="relative overflow-hidden rounded-[2.25rem] border border-primary/20 bg-white/70 p-6 shadow-2xl shadow-primary/10 backdrop-blur">
               <div className="absolute -right-10 -top-12 h-32 w-32 rounded-full bg-primary/20 blur-3xl" />
               <div className="absolute -bottom-10 -left-8 h-28 w-28 rounded-3xl bg-accent/30 blur-3xl" />
-              <div className="relative space-y-5">
-                <div className="text-sm font-semibold uppercase tracking-[0.4em] text-primary/80">
+              <div className="relative space-y-4">
+                <div className="text-xs font-semibold uppercase tracking-[0.4em] text-primary/80">
                   Mensagem do fundador
                 </div>
-                <blockquote className="text-lg font-medium text-foreground">
+                <blockquote className="text-sm font-medium text-foreground">
                   "A grandeza nasce da humildade, da fé e do trabalho honesto.
                   Cada conquista da Frota Justo é fruto de um compromisso
                   inabalável com as pessoas e com o futuro de Angola."
                 </blockquote>
                 <div className="h-px w-full bg-gradient-to-r from-primary/40 via-primary/10 to-transparent" />
                 <div>
-                  <p className="text-sm font-medium text-foreground">
+                  <p className="text-xs font-medium text-foreground">
                     António Lissimo Laurindo "Justo"
                   </p>
                   <p className="text-xs uppercase tracking-[0.3em] text-foreground/60">
@@ -83,8 +83,8 @@ const FounderSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
