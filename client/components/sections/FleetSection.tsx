@@ -5,28 +5,28 @@ import SectionHeading from "./SectionHeading";
 
 const vehicles = [
   {
-    name: "Range Rover Sport 2024",
+    name: "Range Rover Sport 2025",
     category: "SUV de luxo",
     image:
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe1c6ce0f6df1466daa592b4636ee5357?format=webp&width=800",
   },
   {
     name: "Mercedes-Benz Classe S",
     category: "Sedan executivo",
     image:
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F9c63367511374c158e5a031ad96e216d?format=webp&width=800",
   },
   {
-    name: "Lamborghini Huracán EVO",
-    category: "Super desportivo",
+    name: "Dodge Challenger",
+    category: "Muscle Car",
     image:
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Ff3c64bb5bbc44841a09e765fc03678e1?format=webp&width=800",
   },
   {
-    name: "BMW i7 Excellence",
-    category: "Elétrico premium",
+    name: "Mercedes-Benz G63",
+    category: "Off-Road",
     image:
-      "https://images.unsplash.com/photo-1523983302122-62e63b48ef67?auto=format&fit=crop&w=1200&q=80",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=800",
   },
 ];
 
