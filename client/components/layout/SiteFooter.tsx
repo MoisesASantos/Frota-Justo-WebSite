@@ -112,8 +112,8 @@ const SiteFooter = () => {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="size-4 text-primary" />
-              <a href="tel:+97142223766" className="hover:text-foreground">
-                +971 4 222 3766
+              <a href="tel:+971554460901" className="hover:text-foreground">
+                +971 55 446 0901
               </a>
             </li>
             <li className="flex items-center gap-3">
@@ -126,6 +126,18 @@ const SiteFooter = () => {
               <Phone className="size-4 text-primary" />
               <a href="tel:+244949918673" className="hover:text-foreground">
                 +244 949 918 673
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="size-4 text-primary" />
+              <a href="tel:+244923951128" className="hover:text-foreground">
+                +244 923 951 128
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="size-4 text-primary" />
+              <a href="tel:+244947432971" className="hover:text-foreground">
+                +244 947 432 971
               </a>
             </li>
             <li className="flex items-center gap-3">

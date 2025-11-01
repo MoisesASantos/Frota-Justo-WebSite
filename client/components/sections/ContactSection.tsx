@@ -182,10 +182,28 @@ const ContactSection = () => {
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
                 <a
-                  href="tel:+97142223766"
+                  href="tel:+244923951128"
                   className="font-medium text-foreground hover:text-primary"
                 >
-                  +971 4 222 3766
+                  +244 923 951 128
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4 text-primary" />
+                <a
+                  href="tel:+244947432971"
+                  className="font-medium text-foreground hover:text-primary"
+                >
+                  +244 947 432 971
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4 text-primary" />
+                <a
+                  href="tel:+971554460901"
+                  className="font-medium text-foreground hover:text-primary"
+                >
+                  +971 55 446 0901
                 </a>
               </div>
               <div className="flex items-center gap-3">
