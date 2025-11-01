@@ -8,19 +8,19 @@ const vehicles = [
     name: "Range Rover Sport 2025",
     category: "SUV de luxo",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe1c6ce0f6df1466daa592b4636ee5357?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
   },
   {
     name: "Mercedes-Benz Classe S",
     category: "Sedan executivo",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F9c63367511374c158e5a031ad96e216d?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
   },
   {
     name: "Dodge Challenger",
     category: "Muscle Car",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Ff3c64bb5bbc44841a09e765fc03678e1?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
   },
   {
     name: "Mercedes-Benz G63",
