@@ -143,7 +143,7 @@ const ContactSection = () => {
             </form>
           </div>
         </div>
-        <aside className="flex flex-col justify-between gap-10 rounded-3xl border border-primary/15 bg-gradient-to-br from-white via-white to-primary/10 p-8 shadow-xl shadow-primary/10 md:min-h-full">
+        <aside className="flex flex-col gap-10 rounded-3xl border border-primary/15 bg-gradient-to-br from-white via-white to-primary/10 p-8 shadow-xl shadow-primary/10">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-foreground">
               Contacto directo
