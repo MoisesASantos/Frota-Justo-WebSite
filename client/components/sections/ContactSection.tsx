@@ -43,7 +43,7 @@ const ContactSection = () => {
     const whatsappNumber = "244930515127";
 
     // Build the message with line breaks
-    const message = `Olá\n${formState.name}\n${formState.email}\n${formState.phone}\n\n${formState.message}`;
+    const message = `Olá, meu nome é ${formState.name}\n${formState.email}\n${formState.phone}\n\n${formState.message}`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message);
