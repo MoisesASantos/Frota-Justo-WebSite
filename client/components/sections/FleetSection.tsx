@@ -46,11 +46,11 @@ const FleetSection = () => {
               key={vehicle.name}
               className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-card shadow-lg transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-2"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50">
                 <img
                   src={vehicle.image}
                   alt={vehicle.name}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" />
