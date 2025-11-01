@@ -1,23 +1,46 @@
-import "dotenv/config";
 import express from "express";
-import cors from "cors";
+import { createServer as createViteServer } from "vite";
+import path from "path";
+import { fileURLToPath } from "url";
 import { handleDemo } from "./routes/demo";
+import { handlePing } from "./routes/ping";
 
-export function createServer() {
-  const app = express();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const isProduction = process.env.NODE_ENV === "production";
 
-  // Middleware
-  app.use(cors());
+export const app = express();
+
+async function setupApp() {
+  if (!isProduction) {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  }
+
   app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
 
-  // Example API routes
-  app.get("/api/ping", (_req, res) => {
-    const ping = process.env.PING_MESSAGE ?? "ping";
-    res.json({ message: ping });
-  });
-
+  // API routes
+  app.get("/api/ping", handlePing);
   app.get("/api/demo", handleDemo);
 
-  return app;
+  if (isProduction) {
+    const publicPath = path.join(__dirname, "..", "public");
+    app.use(express.static(publicPath));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(publicPath, "index.html"));
+    });
+  }
+}
+
+// Inicializa o app imediatamente
+setupApp();
+
+// Só inicia o servidor HTTP se não estiver rodando como Netlify Function
+if (!process.env.NETLIFY && !process.env.AWS_LAMBDA_FUNCTION_NAME) {
+  const port = process.env.PORT || 8080;
+  app.listen(port, () => {
+    console.log(`Server listening on http://localhost:${port}`);
+  });
 }
