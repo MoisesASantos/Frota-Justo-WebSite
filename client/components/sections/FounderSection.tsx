@@ -11,7 +11,7 @@ const FounderSection = () => {
         <SectionHeading
           align="left"
           eyebrow="Liderança"
-          title={"António Lissimo Laurindo \"Justo\""}
+          title={'António Lissimo Laurindo "Justo"'}
           description="Fundador e CEO do Grupo Frota Justo"
         />
 
