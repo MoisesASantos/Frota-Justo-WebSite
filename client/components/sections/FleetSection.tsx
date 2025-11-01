@@ -17,16 +17,16 @@ const vehicles = [
       "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
   },
   {
-    name: "Dodge Challenger",
-    category: "Muscle Car",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
-  },
-  {
     name: "Mercedes-Benz G63",
     category: "Off-Road",
     image:
       "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=800",
+  },
+  {
+    name: "Dodge Challenger",
+    category: "Muscle Car",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
   },
 ];
 
