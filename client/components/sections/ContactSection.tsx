@@ -48,7 +48,7 @@ const ContactSection = () => {
 
   return (
     <section id="contactos" className="bg-primary/5 py-24 md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[1.1fr,0.9fr] md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:px-8">
         <div>
           <SectionHeading
             align="left"
@@ -139,11 +139,11 @@ const ContactSection = () => {
               Preferia falar agora? Ligue-nos ou envie uma mensagem via WhatsApp. Estamos disponíveis em horários alargados para apoiar o seu projecto.
             </p>
             <div className="space-y-4 text-sm text-foreground/80">
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 size-4 text-primary" />
-                <span>
-                  Frota Justo General Trading — Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai, Dubai Municipality
-                </span>
+              <div className="flex items-center gap-3">
+                <Phone className="size-4 text-primary" />
+                <a href="tel:+244949918673" className="font-medium text-foreground hover:text-primary">
+                  +244 949 918 673
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="size-4 text-primary" />
@@ -157,11 +157,16 @@ const ContactSection = () => {
                   +971 50 758 7620
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="size-4 text-primary" />
-                <a href="tel:+244949918673" className="font-medium text-foreground hover:text-primary">
-                  +244 949 918 673
-                </a>
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 size-4 text-primary" />
+                <div className="space-y-2">
+                  <span className="block">
+                    Frota Justo General Trading — Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai, Dubai Municipality
+                  </span>
+                  <span className="block">
+                    Jardins de Talatona — Rua do Mundo Verde, Condomínio Jardins de Talatona, Edifício A, APT 404, Talatona, Luanda, Luanda Province
+                  </span>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="size-4 text-primary" />
@@ -177,7 +182,7 @@ const ContactSection = () => {
           </div>
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-sm text-foreground/75">
             <p>
-              Equipa presente em Dubai para garantir acompanhamento presencial e remoto, com especialistas em mobilidade, lifestyle e viagens de luxo.
+              Equipa presente em Dubai e Angola para garantir acompanhamento presencial e remoto, com especialistas em mobilidade, lifestyle e viagens de luxo.
             </p>
           </div>
         </aside>
