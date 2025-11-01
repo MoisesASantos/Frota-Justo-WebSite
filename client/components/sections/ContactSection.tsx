@@ -39,6 +39,22 @@ const ContactSection = () => {
     event.preventDefault();
     setIsSubmitting(true);
 
+    // Company WhatsApp number (without + or spaces)
+    const whatsappNumber = "244930515127";
+
+    // Build the message
+    const message = `Olá, meu nome é ${formState.name}. Email: ${formState.email}. Telefone: ${formState.phone}. ${formState.message}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Build the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open in new tab
+    window.open(whatsappUrl, "_blank");
+
+    // Reset form after a short delay
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
