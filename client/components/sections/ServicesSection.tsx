@@ -40,10 +40,7 @@ const ServicesSection = () => {
           {services.map(({ icon: Icon, title, description, details }) => (
             <article
               key={title}
-              className="flex h-full flex-col gap-5 rounded-3xl border border-border bg-card p-8 shadow-xl shadow-primary/5 transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/50"
-              style={{
-                "--tw-shadow-color": "rgb(59, 130, 246 / 0.5)",
-              } as React.CSSProperties}
+              className="flex h-full flex-col gap-5 rounded-3xl border border-border bg-card p-8 shadow-lg transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)]"
             >
               <div className="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <Icon className="size-7" />
