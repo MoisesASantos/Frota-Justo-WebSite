@@ -8,7 +8,10 @@ const services = [
     title: "Venda e arrendamento",
     description:
       "Veículos premium com planos flexíveis de aquisição, assinatura ou aluguer de curta e longa duração.",
-    details: ["Entrega e recolha onde preferir", "Substituição rápida em caso de imprevistos"],
+    details: [
+      "Entrega e recolha onde preferir",
+      "Substituição rápida em caso de imprevistos",
+    ],
   },
   {
     icon: Globe2,
@@ -22,7 +25,10 @@ const services = [
     title: "Logística & consultoria",
     description:
       "Planeamento estratégico, chauffeurs, traslados corporativos e suporte ao protocolo empresarial.",
-    details: ["Assistência bilingue 24/7", "Relatórios e acompanhamento em tempo real"],
+    details: [
+      "Assistência bilingue 24/7",
+      "Relatórios e acompanhamento em tempo real",
+    ],
   },
 ];
 
@@ -46,7 +52,9 @@ const ServicesSection = () => {
                 <Icon className="size-7" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+                <h3 className="text-xl font-semibold text-foreground">
+                  {title}
+                </h3>
                 <p className="mt-3 text-sm text-foreground/70">{description}</p>
               </div>
               <ul className="mt-auto space-y-2 text-sm text-foreground/60">
