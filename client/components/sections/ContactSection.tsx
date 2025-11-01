@@ -49,7 +49,7 @@ const ContactSection = () => {
   return (
     <section id="contactos" className="bg-primary/5 py-24 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:px-8">
-        <div>
+        <div className="flex flex-col gap-8">
           <SectionHeading
             align="left"
             eyebrow="Fale conosco"
@@ -57,7 +57,7 @@ const ContactSection = () => {
             description="Preencha o formulário e um consultor responderá em menos de 24 horas para ajudar com arrendamento de veículos ou planeamento completo da sua viagem para Dubai."
           />
 
-          <div className="mt-8 rounded-3xl border border-border bg-card p-8 shadow-xl shadow-primary/10">
+          <div className="flex-1 rounded-3xl border border-border bg-card p-8 shadow-xl shadow-primary/10">
             {isSubmitted && (
               <div className="mb-6 rounded-2xl border border-primary/40 bg-primary/10 p-4 text-sm text-primary">
                 Mensagem enviada com sucesso! Entraremos em contacto muito em
@@ -143,7 +143,7 @@ const ContactSection = () => {
             </form>
           </div>
         </div>
-        <aside className="flex h-full flex-col justify-between gap-10 rounded-3xl border border-primary/15 bg-gradient-to-br from-white via-white to-primary/10 p-8 shadow-xl shadow-primary/10">
+        <aside className="flex flex-col justify-between gap-10 rounded-3xl border border-primary/15 bg-gradient-to-br from-white via-white to-primary/10 p-8 shadow-xl shadow-primary/10 md:min-h-full">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-foreground">
               Contacto directo
