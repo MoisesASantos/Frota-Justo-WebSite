@@ -42,7 +42,9 @@ const HeroSection = () => {
               Mobilidade e experiências de luxo, ao seu alcance.
             </h1>
             <p className="max-w-xl text-lg text-white/80 md:text-xl">
-              Venda e arrendamento de automóveis premium, assessoria completa para Dubai e um serviço que combina confiança, exclusividade e atenção absoluta aos detalhes.
+              Venda e arrendamento de automóveis premium, assessoria completa
+              para Dubai e um serviço que combina confiança, exclusividade e
+              atenção absoluta aos detalhes.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button
@@ -69,7 +71,8 @@ const HeroSection = () => {
             </div>
             <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm text-white/85 backdrop-blur">
               <ShieldCheck className="size-5 text-accent" />
-              Consultoria personalizada, contratos transparentes e suporte bilingue.
+              Consultoria personalizada, contratos transparentes e suporte
+              bilingue.
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
