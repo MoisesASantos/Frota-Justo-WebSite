@@ -57,7 +57,7 @@ const AboutSection = () => {
         <div className="relative">
           <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-3xl bg-primary/20 blur-3xl sm:block" />
           <div className="absolute -bottom-8 -right-8 hidden h-28 w-28 rounded-full bg-accent/30 blur-3xl sm:block" />
-          <div className="relative h-[700px] overflow-hidden rounded-3xl shadow-2xl shadow-primary/10">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-primary/10">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F890768a30e46456fba742a0c4c8131c7"
               alt="Consultor da Frota Justo apresentando veículo premium"
