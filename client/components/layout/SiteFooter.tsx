@@ -103,6 +103,13 @@ const SiteFooter = () => {
                 Muraqqabat, Deira, Dubai, Dubai Municipality
               </span>
             </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 size-4 text-primary" />
+              <span>
+                Jardins de Talatona — Rua do Mundo Verde, Condomínio Jardins de
+                Talatona, Edifício A, APT 404, Talatona, Luanda, Luanda Province
+              </span>
+            </li>
             <li className="flex items-center gap-3">
               <Phone className="size-4 text-primary" />
               <a href="tel:+97142223766" className="hover:text-foreground">

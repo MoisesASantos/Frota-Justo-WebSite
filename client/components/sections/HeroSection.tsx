@@ -15,7 +15,7 @@ const stats = [
   {
     label: "Suporte dedicado",
     value: "24/7",
-    description: "Equipa disponível em Portugal e Dubai para o que precisar",
+    description: "Equipa disponível em Dubai e Angola para o que precisar",
   },
 ];
 
