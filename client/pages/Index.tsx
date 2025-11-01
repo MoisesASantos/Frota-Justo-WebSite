@@ -11,10 +11,10 @@ const Index = () => {
     <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
-      <FounderSection />
       <FleetSection />
       <ServicesSection />
       <DubaiExperienceSection />
+      <FounderSection />
       <ContactSection />
     </div>
   );
