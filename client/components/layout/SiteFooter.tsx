@@ -44,7 +44,7 @@ const SiteFooter = () => {
               href="https://www.instagram.com/frotajustoofficial?utm_source=ig_web_button_share_sheet&igsh=aTVtcnNvNW4zMmlm"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const SiteFooter = () => {
               href="https://www.tiktok.com/@antoniolaurind?is_from_webapp=1&sender_device=pc"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,20 +112,8 @@ const SiteFooter = () => {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="size-4 text-primary" />
-              <a href="tel:+971554460901" className="hover:text-foreground">
-                +971 55 446 0901
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="size-4 text-primary" />
               <a href="tel:+971507587620" className="hover:text-foreground">
                 +971 50 758 7620
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="size-4 text-primary" />
-              <a href="tel:+244949918673" className="hover:text-foreground">
-                +244 949 918 673
               </a>
             </li>
             <li className="flex items-center gap-3">
