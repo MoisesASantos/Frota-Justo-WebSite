@@ -384,7 +384,7 @@ const suvs: Car[] = [
     year: 2023,
     transmission: "Automática",
     fuel: "Gasolina",
-    description: "Brabus 900 Rocket Edition baseado no Mercedes-AMG G 63. Motor V8 biturbo Rocket 900 de 4.5L produzindo 900 cv e 1.250 Nm de torque. Aceleração 0-100 km/h em 3.7 segundos, velocidade máxima de 280 km/h. Conceito aerodinâmico Widestar com spoilers em fibra de carbono, rodas forjadas de 24 polegadas. Interior artesanal com couro e detalhes 'Rocket Red'. Edição limitada de apenas 25 unidades.",
+    description: "Brabus 900 Rocket Edition baseado no Mercedes-AMG G63. Motor V8 biturbo Rocket 900 de 4.5L produzindo 900 cv e 1.250 Nm de torque. Aceleração 0-100 km/h em 3.7 segundos, velocidade máxima de 280 km/h. Conceito aerodinâmico Widestar com spoilers em fibra de carbono, rodas forjadas de 24 polegadas. Interior artesanal com couro e detalhes 'Rocket Red'. Edição limitada de apenas 25 unidades.",
     mainImage: "/images/fleet/SUV/Mercedes-G63-BRABUS/image1.jpg",
     images: [
       { url: "/images/fleet/SUV/Mercedes-G63-BRABUS/image2.jpg", alt: "Brabus 900 Rocket - Vista frontal exclusiva" },
@@ -394,12 +394,12 @@ const suvs: Car[] = [
   },
   {
     id: "mercedes-g63-branco",
-    name: "Mercedes-AMG G 63 Branco",
+    name: "Mercedes-AMG G63 Branco",
     category: "SUV",
     year: 2024,
     transmission: "Automática",
     fuel: "Gasolina",
-    description: "Mercedes-AMG G 63 branco, SUV de luxo de alto desempenho da linha G-Class. Grade frontal com barras verticais características e para-choque esportivo. Interior premium com tecnologia de ponta e acabamentos de alta qualidade. Ícone de robustez e luxo combinados.",
+    description: "Mercedes-AMG G63 branco, SUV de luxo de alto desempenho da linha G-Class. Grade frontal com barras verticais características e para-choque esportivo. Interior premium com tecnologia de ponta e acabamentos de alta qualidade. Ícone de robustez e luxo combinados.",
     mainImage: "/images/fleet/SUV/Mercedes-G63-White/image1.jpg",
     images: [
       { url: "/images/fleet/SUV/Mercedes-G63-White/image2.jpg", alt: "Mercedes G63 Branco - Vista frontal icônica" },
@@ -409,12 +409,12 @@ const suvs: Car[] = [
   },
   {
     id: "mercedes-g63-preto",
-    name: "Mercedes-AMG G 63 Preto",
+    name: "Mercedes-AMG G63 Preto",
     category: "SUV",
     year: 2024,
     transmission: "Automática",
     fuel: "Gasolina",
-    description: "Mercedes-AMG G 63 na cor preta, combinando o design icônico do G-Class com performance excepcional. Motor V8 biturbo de alta potência, interior luxuoso com acabamentos premium e capacidade off-road lendária.",
+    description: "Mercedes-AMG G63 na cor preta, combinando o design icônico do G-Class com performance excepcional. Motor V8 biturbo de alta potência, interior luxuoso com acabamentos premium e capacidade off-road lendária.",
     mainImage: "/images/fleet/SUV/Mercedes-G63-Black/image1.jpg",
     images: [
       { url: "/images/fleet/SUV/Mercedes-G63-Black/image2.jpg", alt: "Mercedes G63 Preto - Vista frontal" },

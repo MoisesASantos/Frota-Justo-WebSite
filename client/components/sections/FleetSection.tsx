@@ -16,9 +16,9 @@ const vehicles = [
     image: "/images/fleet/Sedan/Genesis-G70/image2.jpg",
   },
   {
-    name: "Brabus 900 Rocket Edition",
+    name: "Mercedes-Benz AMG G63",
     category: "SUV Exclusivo",
-    image: "/images/fleet/SUV/Mercedes-G63-BRABUS/image1.jpg",
+    image: "/images/fleet/SUV/Mercedes-G63-White/image2.jpg",
   },
   {
     name: "Chevrolet Silverado 1500",
