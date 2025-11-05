@@ -94,8 +94,11 @@ const SiteHeader = () => {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4 md:px-8 md:py-5">
         <a
-          href="#inicio"
-          onClick={(event) => handleAnchorClick(event, "inicio")}
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            navigate("/");
+          }}
           className="flex items-center gap-3 text-lg font-semibold tracking-tight text-foreground"
           aria-label="Frota Justo início"
         >
@@ -121,8 +124,8 @@ const SiteHeader = () => {
           {navItems.map((item) => (
             <a
               key={item.target}
-              href={`#${item.target}`}
-              onClick={(event) => handleAnchorClick(event, item.target)}
+              href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
+              onClick={(event) => handleNavClick(event, item.target)}
               className="relative text-foreground/80 transition-colors hover:text-foreground"
             >
               {item.label}
@@ -132,16 +135,14 @@ const SiteHeader = () => {
 
         <div className="hidden md:block">
           <Button
-            asChild
             size="lg"
             className="rounded-full px-6 shadow-lg shadow-primary/20"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavClick(event as any, "contactos");
+            }}
           >
-            <a
-              href="#contactos"
-              onClick={(event) => handleAnchorClick(event, "contactos")}
-            >
-              Solicitar Orçamento
-            </a>
+            Solicitar Orçamento
           </Button>
         </div>
 
@@ -160,8 +161,8 @@ const SiteHeader = () => {
             {navItems.map((item) => (
               <a
                 key={item.target}
-                href={`#${item.target}`}
-                onClick={(event) => handleAnchorClick(event, item.target)}
+                href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
+                onClick={(event) => handleNavClick(event, item.target)}
                 className="rounded-lg px-2 py-1.5 text-foreground/85 transition-colors hover:bg-primary/10 hover:text-foreground"
               >
                 {item.label}
@@ -169,16 +170,14 @@ const SiteHeader = () => {
             ))}
           </nav>
           <Button
-            asChild
             size="lg"
             className="mt-5 w-full rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavClick(event as any, "contactos");
+            }}
           >
-            <a
-              href="#contactos"
-              onClick={(event) => handleAnchorClick(event, "contactos")}
-            >
-              Solicitar Orçamento
-            </a>
+            Solicitar Orçamento
           </Button>
         </div>
       )}
