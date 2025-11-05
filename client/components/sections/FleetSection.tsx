@@ -6,28 +6,24 @@ import SectionHeading from "./SectionHeading";
 
 const vehicles = [
   {
-    name: "Range Rover Sport 2025",
-    category: "SUV de luxo",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-  },
-  {
-    name: "Mercedes-Benz Classe S",
-    category: "Sedan executivo",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
-  },
-  {
-    name: "Mercedes-Benz G63",
-    category: "Off-Road",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=800",
-  },
-  {
     name: "Dodge Challenger",
     category: "Muscle Car",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
+    image: "/images/fleet/Muscle/Dodge-Challenger-Hellcat-Green/image1.jpg",
+  },
+  {
+    name: "Genesis G70",
+    category: "Sedan executivo",
+    image: "/images/fleet/Sedan/Genesis-G70/image2.jpg",
+  },
+  {
+    name: "Brabus 900 Rocket Edition",
+    category: "SUV Exclusivo",
+    image: "/images/fleet/SUV/Mercedes-G63-BRABUS/image1.jpg",
+  },
+  {
+    name: "Chevrolet Silverado 1500",
+    category: "Carrinhas",
+    image: "/images/fleet/Carrinhas/Chervolet-Silverado/image4.jpg",
   },
 ];
 
