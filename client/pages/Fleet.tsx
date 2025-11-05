@@ -12,7 +12,6 @@ const Fleet = () => {
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,12 +28,17 @@ const Fleet = () => {
 
   const handleRequestClick = () => {
     setIsModalOpen(false);
-    // Navigate to home page and scroll to contact section
-    navigate("/#contactos");
+    navigate("/");
     setTimeout(() => {
       const element = document.getElementById("contactos");
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
     }, 100);
   };
@@ -42,31 +46,31 @@ const Fleet = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-primary/5 pt-32 pb-12 md:pt-40 md:pb-16">
-        <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <section className="bg-gradient-to-br from-primary/10 to-primary/5 pt-32 pb-8 md:pt-40 md:pb-12">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading
             eyebrow="Frota Completa"
             title="Explore nossa seleção de veículos premium"
-            description="Da elegância dos sedans executivos à força dos muscle cars, encontre o veículo perfeito para sua jornada em Dubai e além."
+            description="100 veículos de luxo selecionados. Encontre o carro perfeito para sua jornada."
           />
         </div>
       </section>
 
       {/* Main Fleet Section */}
-      <section className="flex-1 py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <section className="flex-1 py-8 md:py-12">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
           {/* Category Filter */}
-          <div className="mb-12 flex flex-wrap gap-3">
+          <div className="mb-8 flex flex-wrap gap-2 md:gap-3">
             <button
               type="button"
               onClick={() => setSelectedCategory(null)}
-              className={`rounded-full px-6 py-3 text-sm font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-xs md:text-sm font-medium transition-all ${
                 selectedCategory === null
                   ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
                   : "border border-border/70 text-foreground/80 hover:border-primary hover:bg-primary/10"
               }`}
             >
-              Todos os carros ({cars.length})
+              Todos ({cars.length})
             </button>
             {categories.map((category) => {
               const count = cars.filter((car) => car.category === category)
@@ -76,7 +80,7 @@ const Fleet = () => {
                   key={category}
                   type="button"
                   onClick={() => setSelectedCategory(category)}
-                  className={`rounded-full px-6 py-3 text-sm font-medium transition-all ${
+                  className={`rounded-full px-5 py-2 text-xs md:text-sm font-medium transition-all ${
                     selectedCategory === category
                       ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
                       : "border border-border/70 text-foreground/80 hover:border-primary hover:bg-primary/10"
@@ -90,15 +94,15 @@ const Fleet = () => {
 
           {/* Cars Grid */}
           {filteredCars.length > 0 ? (
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {filteredCars.map((car) => (
                 <article
                   key={car.id}
-                  className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-card shadow-lg transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-2"
+                  className="group flex h-full flex-col overflow-hidden rounded-xl border border-primary/10 bg-card shadow-md transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-1"
                 >
                   {/* Image Section */}
                   <div
-                    className="relative aspect-[4/3] w-full cursor-pointer overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50"
+                    className="relative aspect-square w-full cursor-pointer overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50"
                     onClick={() => handleCarClick(car)}
                   >
                     <img
@@ -107,85 +111,37 @@ const Fleet = () => {
                       className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/20">
-                      <span className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        <svg
-                          className="size-12 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
-                          />
-                        </svg>
-                      </span>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />
                   </div>
 
                   {/* Content Section */}
-                  <div className="flex flex-1 flex-col gap-4 p-6 md:p-7">
+                  <div className="flex flex-1 flex-col gap-2 p-3 md:p-4">
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/80">
+                      <span className="text-xs font-semibold uppercase tracking-widest text-primary/80">
                         {car.category}
                       </span>
-                      <h3 className="mt-3 text-xl font-semibold text-foreground">
+                      <h3 className="mt-1 text-sm font-semibold text-foreground line-clamp-2">
                         {car.name}
                       </h3>
-                      <p className="mt-2 text-sm text-foreground/70">
-                        {car.description}
-                      </p>
                     </div>
 
                     {/* Specs Row */}
-                    <div className="flex gap-3 py-3 text-xs text-foreground/60">
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium">{car.year}</span>
-                      </span>
+                    <div className="flex gap-2 text-xs text-foreground/60 flex-wrap">
+                      <span className="font-medium">{car.year}</span>
                       <span className="text-foreground/40">•</span>
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium">{car.transmission}</span>
-                      </span>
+                      <span className="font-medium">{car.fuel}</span>
                       <span className="text-foreground/40">•</span>
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium">{car.fuel}</span>
-                      </span>
+                      <span className="font-medium">{car.transmission}</span>
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="mt-auto flex gap-3">
-                      <button
-                        type="button"
-                        onClick={() => handleCarClick(car)}
-                        className="flex-1 rounded-full bg-primary/10 px-4 py-2.5 text-center text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                      >
-                        Ver detalhes
-                      </button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="rounded-full"
-                        onClick={() => handleCarClick(car)}
-                      >
-                        <svg
-                          className="size-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </Button>
-                    </div>
+                    {/* Action Button */}
+                    <button
+                      type="button"
+                      onClick={() => handleCarClick(car)}
+                      className="mt-auto w-full rounded-lg bg-primary/10 px-3 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      Ver detalhes
+                    </button>
                   </div>
                 </article>
               ))}
@@ -202,8 +158,8 @@ const Fleet = () => {
 
       {/* Contact Section */}
       <section className="bg-primary/5 py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-6 md:px-8">
-          <div className="mb-12">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="mb-8">
             <SectionHeading
               eyebrow="Precisa de ajuda?"
               title="Entre em contacto connosco"
@@ -211,13 +167,13 @@ const Fleet = () => {
             />
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-border/40 bg-card p-8">
-              <Phone className="size-8 text-primary" />
-              <h3 className="mt-4 text-lg font-semibold text-foreground">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-xl border border-border/40 bg-card p-6">
+              <Phone className="size-6 text-primary" />
+              <h3 className="mt-3 text-base font-semibold text-foreground">
                 Telefone
               </h3>
-              <div className="mt-3 space-y-2 text-sm text-foreground/70">
+              <div className="mt-2 space-y-1 text-sm text-foreground/70">
                 <a
                   href="tel:+971507587620"
                   className="block hover:text-foreground"
@@ -233,25 +189,25 @@ const Fleet = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-border/40 bg-card p-8">
-              <Mail className="size-8 text-primary" />
-              <h3 className="mt-4 text-lg font-semibold text-foreground">
+            <div className="rounded-xl border border-border/40 bg-card p-6">
+              <Mail className="size-6 text-primary" />
+              <h3 className="mt-3 text-base font-semibold text-foreground">
                 Email
               </h3>
               <a
                 href="mailto:contacto@frotajusto.com"
-                className="mt-3 block text-sm text-foreground/70 hover:text-foreground"
+                className="mt-2 block text-sm text-foreground/70 hover:text-foreground"
               >
                 contacto@frotajusto.com
               </a>
             </div>
 
-            <div className="rounded-2xl border border-border/40 bg-card p-8">
-              <MapPin className="size-8 text-primary" />
-              <h3 className="mt-4 text-lg font-semibold text-foreground">
+            <div className="rounded-xl border border-border/40 bg-card p-6">
+              <MapPin className="size-6 text-primary" />
+              <h3 className="mt-3 text-base font-semibold text-foreground">
                 Localização
               </h3>
-              <p className="mt-3 text-sm text-foreground/70">
+              <p className="mt-2 text-sm text-foreground/70">
                 Doha Centre, 29, 40a Street, Al Muraqqabat, Deira, Dubai
               </p>
             </div>
@@ -261,7 +217,7 @@ const Fleet = () => {
             <Button
               size="lg"
               className="rounded-full px-8 shadow-lg shadow-primary/20"
-              onClick={() => navigate("/#contactos")}
+              onClick={() => navigate("/")}
             >
               Enviar mensagem
             </Button>
