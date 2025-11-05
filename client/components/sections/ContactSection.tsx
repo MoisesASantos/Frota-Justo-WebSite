@@ -107,7 +107,7 @@ const ContactSection = () => {
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="email@empresa.com"
+                    placeholder="seuemail@gmail.com"
                     value={formState.email}
                     onChange={handleChange}
                     required
@@ -123,7 +123,7 @@ const ContactSection = () => {
                   <Input
                     id="phone"
                     name="phone"
-                    placeholder="+351 21 000 0000"
+                    placeholder="+244 XXX XXX XXX"
                     value={formState.phone}
                     onChange={handleChange}
                     required

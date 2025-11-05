@@ -200,7 +200,7 @@ const Fleet = () => {
                 href="mailto:contacto@frotajusto.com"
                 className="mt-2 block text-sm text-foreground/70 hover:text-foreground"
               >
-                contacto@frotajusto.com
+                frotajustolda@hotmail.com
               </a>
             </div>
 
