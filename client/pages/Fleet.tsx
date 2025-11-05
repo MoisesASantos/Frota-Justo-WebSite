@@ -32,13 +32,9 @@ const Fleet = () => {
     setTimeout(() => {
       const element = document.getElementById("contactos");
       if (element) {
-        const headerOffset = 100;
-        const elementPosition =
-          element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
+        element.scrollIntoView({
           behavior: "smooth",
+          block: "start",
         });
       }
     }, 100);
@@ -219,7 +215,18 @@ const Fleet = () => {
             <Button
               size="lg"
               className="rounded-full px-8 shadow-lg shadow-primary/20"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("contactos");
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }, 100);
+              }}
             >
               Enviar mensagem
             </Button>
