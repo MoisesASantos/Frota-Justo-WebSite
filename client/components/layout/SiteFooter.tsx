@@ -180,10 +180,10 @@ const SiteFooter = () => {
             <li className="flex items-center gap-3">
               <Mail className="size-4 text-primary" />
               <a
-                href="mailto:contacto@frotajusto.com"
+                href="mailto:frotajustolda@hotmail.com"
                 className="hover:text-foreground"
               >
-                contacto@frotajusto.com
+                frotajustolda@hotmail.com
               </a>
             </li>
           </ul>

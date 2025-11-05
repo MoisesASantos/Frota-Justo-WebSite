@@ -378,22 +378,6 @@ const suvs: Car[] = [
     ]
   },
   {
-    id: "mercedes-g63-brabus-dubai",
-    name: "Mercedes-Benz G63 Brabus",
-    category: "SUV",
-    year: 2023,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Mercedes-Benz Classe G modificado pela Brabus com kit de carroceria personalizado e emblema 'B' na grade. Baseado no AMG G 63, com motor V8 biturbo aprimorado para mais de 800 cv. Kit Widestar para aparência mais larga, rodas forjadas, escapamento esportivo e interior personalizado com couro de alta qualidade e fibra de carbono.",
-    mainImage: "/images/fleet/SUV/Mercedes-G63-BRABUS/image1.jpg",
-    featured: true,
-    images: [
-      { url: "/images/fleet/SUV/Mercedes-G63-BRABUS/image2.jpg", alt: "Mercedes G63 Brabus - Vista frontal agressiva" },
-      { url: "/images/fleet/SUV/Mercedes-G63-BRABUS/image3.jpg", alt: "Mercedes G63 Brabus - Lateral" },
-      { url: "/images/fleet/SUV/Mercedes-G63-BRABUS/image4.jpg", alt: "Mercedes G63 Brabus - Interior premium" }
-    ]
-  },
-  {
     id: "brabus-900-rocket-edition",
     name: "Brabus 900 Rocket Edition",
     category: "SUV",

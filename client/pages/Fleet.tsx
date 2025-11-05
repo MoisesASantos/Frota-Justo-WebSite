@@ -197,7 +197,7 @@ const Fleet = () => {
                 Email
               </h3>
               <a
-                href="mailto:contacto@frotajusto.com"
+                href="mailto:frotajustolda@hotmail.com"
                 className="mt-2 block text-sm text-foreground/70 hover:text-foreground"
               >
                 frotajustolda@hotmail.com
