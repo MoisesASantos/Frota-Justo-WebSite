@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -19,6 +20,8 @@ const navItems: NavItem[] = [
 const SiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,16 +33,54 @@ const SiteHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleAnchorClick = (
+  const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
+    target: string,
   ) => {
     event.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
     setIsOpen(false);
+
+    const isFleetPage = location.pathname === "/frota";
+    const isHomePage = location.pathname === "/";
+
+    // If navigating to "Frota" and already on fleet page, scroll to top
+    if (target === "frota") {
+      if (isFleetPage) {
+        window.scrollTo(0, 0);
+      } else {
+        navigate("/frota");
+      }
+      return;
+    }
+
+    // If navigating to "Início"
+    if (target === "inicio") {
+      if (isHomePage) {
+        const element = document.getElementById(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        navigate("/");
+      }
+      return;
+    }
+
+    // For other anchor links, navigate to home if not there
+    if (!isHomePage) {
+      navigate(`/#${target}`);
+      setTimeout(() => {
+        const element = document.getElementById(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
   };
 
   return (
