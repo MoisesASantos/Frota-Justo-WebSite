@@ -132,7 +132,8 @@ const SiteFooter = () => {
             {anchorItems.map((item) => (
               <a
                 key={item.target}
-                href={`#${item.target}`}
+                href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
+                onClick={(event) => handleNavClick(event, item.target)}
                 className="hover:text-foreground"
               >
                 {item.label}
