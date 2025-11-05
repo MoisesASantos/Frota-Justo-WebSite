@@ -33,7 +33,8 @@ const Fleet = () => {
       const element = document.getElementById("contactos");
       if (element) {
         const headerOffset = 100;
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
         window.scrollTo({
           top: offsetPosition,
@@ -73,8 +74,9 @@ const Fleet = () => {
               Todos ({cars.length})
             </button>
             {categories.map((category) => {
-              const count = cars.filter((car) => car.category === category)
-                .length;
+              const count = cars.filter(
+                (car) => car.category === category,
+              ).length;
               return (
                 <button
                   key={category}
