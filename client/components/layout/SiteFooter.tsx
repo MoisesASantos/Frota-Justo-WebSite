@@ -1,3 +1,4 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const anchorItems = [
@@ -10,6 +11,53 @@ const anchorItems = [
 
 const SiteFooter = () => {
   const year = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    target: string,
+  ) => {
+    event.preventDefault();
+    const isFleetPage = location.pathname === "/frota";
+    const isHomePage = location.pathname === "/";
+
+    if (target === "frota") {
+      if (!isFleetPage) {
+        navigate("/frota");
+      } else {
+        window.scrollTo(0, 0);
+      }
+      return;
+    }
+
+    if (target === "inicio") {
+      if (isHomePage) {
+        const element = document.getElementById(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        navigate("/");
+      }
+      return;
+    }
+
+    if (!isHomePage) {
+      navigate(`/#${target}`);
+      setTimeout(() => {
+        const element = document.getElementById(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
 
   return (
     <footer className="mt-24 bg-primary/5 text-sm text-foreground/80">
