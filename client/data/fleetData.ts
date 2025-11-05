@@ -136,9 +136,9 @@ const sedans: Car[] = [
       "O Mercedes-Benz A45 AMG Petronas World Champion Edition celebra as vitórias da equipe na F1. Possui faixas em verde petróleo, rodas de 19 polegadas com detalhes verdes e interior com bancos AMG e costuras combinando. Equipado com motor 2.0L turbo de quatro cilindros de alto desempenho.",
     mainImage: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image1.jpg",
     images: [
-      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image2.jpg", alt: "Mercedes A45 AMG - Frente" },
-      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image3.jpg", alt: "Mercedes A45 AMG - Traseira" },
-      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image4.jpg", alt: "Mercedes A45 AMG - Interior" }
+      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image1.jpg", alt: "Mercedes A45 AMG - Frente" },
+      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image1.jpg", alt: "Mercedes A45 AMG - Traseira" },
+      { url: "/images/fleet/sedan/Mercedes-Benz-A45-AMG-2015/image1.jpg", alt: "Mercedes A45 AMG - Interior" }
     ]
   },
   {
@@ -250,9 +250,9 @@ const suvs: Car[] = [
     description: "Kia Sorento da terceira geração (2015-2018) com motor V6 3.3L de 270 cavalos de potência. SUV para sete passageiros com consumo de 7,2 km/l na cidade e 9,3 km/l na estrada. Inclui teto solar panorâmico, bancos com ajustes elétricos e aquecimento, direção elétrica, ar-condicionado digital de dupla zona e chave presencial.",
     mainImage: "/images/fleet/suv/Kia-Sorento/image1.jpg",
     images: [
-      { url: "/images/fleet/suv/Kia-Sorento/image2.jpg", alt: "Kia Sorento - Vista frontal" },
-      { url: "/images/fleet/suv/Kia-Sorento/image3.jpg", alt: "Kia Sorento - Lateral" },
-      { url: "/images/fleet/suv/Kia-Sorento/image4.jpg", alt: "Kia Sorento - Interior de 7 lugares" }
+      { url: "/images/fleet/suv/Kia-Sorento/image1.jpg", alt: "Kia Sorento - Vista frontal" },
+      { url: "/images/fleet/suv/Kia-Sorento/image1.jpg", alt: "Kia Sorento - Lateral" },
+      { url: "/images/fleet/suv/Kia-Sorento/image1.jpg", alt: "Kia Sorento - Interior de 7 lugares" }
     ]
   },
   {
@@ -358,8 +358,8 @@ const suvs: Car[] = [
     featured: true,
     images: [
       { url: "/images/fleet/suv/Lexus-570/image2.jpg", alt: "Lexus LX 570 - Vista frontal de luxo" },
-      { url: "/images/fleet/suv/Lexus-570/image3.jpg", alt: "Lexus LX 570 - Lateral" },
-      { url: "/images/fleet/suv/Lexus-570/image4.jpg", alt: "Lexus LX 570 - Interior premium" }
+      { url: "/images/fleet/suv/Lexus-570/image1.jpg", alt: "Lexus LX 570 - Lateral" },
+      { url: "/images/fleet/suv/Lexus-570/image2.jpg", alt: "Lexus LX 570 - Interior premium" }
     ]
   },
   {
@@ -374,7 +374,7 @@ const suvs: Car[] = [
     images: [
       { url: "/images/fleet/suv/Mercedes-Benz-GL-Class/image2.jpg", alt: "Mercedes GL-Class - Vista frontal" },
       { url: "/images/fleet/suv/Mercedes-Benz-GL-Class/image3.jpg", alt: "Mercedes GL-Class - Lateral" },
-      { url: "/images/fleet/suv/Mercedes-Benz-GL-Class/image4.jpg", alt: "Mercedes GL-Class - Interior de luxo" }
+      { url: "/images/fleet/suv/Mercedes-Benz-GL-Class/image1.jpg", alt: "Mercedes GL-Class - Interior de luxo" }
     ]
   },
   {
@@ -650,8 +650,8 @@ const muscles: Car[] = [
     mainImage: "/images/fleet/muscle/dodge-challenger-vinho/image1.jpg",
     images: [
       { url: "/images/fleet/muscle/dodge-challenger-vinho/image2.jpg", alt: "Dodge Challenger - Vista lateral" },
-      { url: "/images/fleet/muscle/dodge-challenger-vinho/image3.jpg", alt: "Dodge Challenger - Traseira" },
-      { url: "/images/fleet/muscle/dodge-challenger-vinho/image4.jpg", alt: "Dodge Challenger - Interior" }
+      { url: "/images/fleet/muscle/dodge-challenger-vinho/image1.jpg", alt: "Dodge Challenger - Traseira" },
+      { url: "/images/fleet/muscle/dodge-challenger-vinho/image2.jpg", alt: "Dodge Challenger - Interior" }
     ]
   },
   {
@@ -724,6 +724,88 @@ const muscles: Car[] = [
 // MAIS PROCURADOS - 20 carros
 // ============================================
 const maisProc: Car[] = [
+  // SUV
+  {
+    id: "dodge-durango-srt",
+    name: "Dodge Durango SRT",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "SUV de alto desempenho com motor V8 sobrealimentado de até 710 cv. Combina potência e espaço familiar.",
+    mainImage: "/images/fleet/suv/Dogde-Durango/image1.jpg",
+    featured: true,
+    images: [
+      { url: "/images/fleet/suv/Dogde-Durango/image2.jpg", alt: "Dodge Durango - Vista frontal" },
+      { url: "/images/fleet/suv/Dogde-Durango/image4.jpg", alt: "Dodge Durango - Interior" }
+    ]
+  },
+
+  // Sedan
+  {
+    id: "bmw-m3-competition-2025",
+    name: "BMW M3 Competition",
+    category: "Mais procurados",
+    year: 2025,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Sedan esportivo de luxo com 510 cv e design agressivo. Interior premium e desempenho de 0 a 100 km/h em 3,9s.",
+    mainImage: "/images/fleet/mais-procurados/bmw-m3/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/bmw-m3/image2.jpg", alt: "BMW M3 Competition - Frente" },
+      { url: "/images/fleet/mais-procurados/bmw-m3/image3.jpg", alt: "BMW M3 Competition - Interior esportivo" }
+    ]
+  },
+
+  // Muscle
+  {
+    id: "chevrolet-corvette-c8-2024",
+    name: "Chevrolet Corvette C8",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Supercar americano de motor central. Combina desempenho impressionante e design premium.",
+    mainImage: "/images/fleet/mais-procurados/chevrolet-corvette/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/chevrolet-corvette/image2.jpg", alt: "Chevrolet Corvette C8 - Vista frontal" },
+      { url: "/images/fleet/mais-procurados/chevrolet-corvette/image3.jpg", alt: "Chevrolet Corvette C8 - Interior esportivo" }
+    ]
+  },
+
+  // Carrinha
+  {
+    id: "ford-transit-2024",
+    name: "Ford Transit",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Manual",
+    fuel: "Diesel",
+    description: "Van comercial versátil e confiável, ideal para transporte de carga ou passageiros. Espaço e robustez garantidos.",
+    mainImage: "/images/fleet/mais-procurados/ford-transit/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/ford-transit/image2.jpg", alt: "Ford Transit - Vista frontal" },
+      { url: "/images/fleet/mais-procurados/ford-transit/image3.jpg", alt: "Ford Transit - Interior funcional" }
+    ]
+  },
+
+  // SUV
+  {
+    id: "kia-sportage-2024-white",
+    name: "Kia Sportage Branco",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "SUV moderno com motor 1.6 turbo de 180 cv e sistema híbrido leve. Design futurista e interior tecnológico.",
+    mainImage: "/images/fleet/suv/Kia-Sportage-2024-white/image1.jpg",
+    images: [
+      { url: "/images/fleet/suv/Kia-Sportage-2024-white/image2.jpg", alt: "Kia Sportage Branco - Frente" },
+      { url: "/images/fleet/suv/Kia-Sportage-2024-white/image4.jpg", alt: "Kia Sportage Branco - Interior" }
+    ]
+  },
+
+  // Sedan
   {
     id: "toyota-corolla-2024",
     name: "Toyota Corolla",
@@ -731,73 +813,216 @@ const maisProc: Car[] = [
     year: 2024,
     transmission: "Automática",
     fuel: "Híbrido",
-    description: "O sedan mais vendido do mundo. Confiabilidade e economia garantidas.",
+    description: "O sedan mais vendido do mundo. Confiabilidade, conforto e eficiência híbrida garantidas.",
     mainImage: "/images/fleet/mais-procurados/toyota-corolla/main.jpg",
-    featured: true, // ⭐ Aparece na home
     images: [
-      {
-        url: "/images/fleet/mais-procurados/toyota-corolla/frontal.jpg",
-        alt: "Toyota Corolla - Vista frontal"
-      },
-      {
-        url: "/images/fleet/mais-procurados/toyota-corolla/interior.jpg",
-        alt: "Toyota Corolla - Interior confortável"
-      }
+      { url: "/images/fleet/mais-procurados/toyota-corolla/frontal.jpg", alt: "Toyota Corolla - Vista frontal" },
+      { url: "/images/fleet/mais-procurados/toyota-corolla/interior.jpg", alt: "Toyota Corolla - Interior confortável" }
     ]
   },
-  {
-    id: "honda-civic-2024",
-    name: "Honda Civic",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Sedan esportivo e confiável. Design moderno e tecnologia avançada.",
-    mainImage: "/images/fleet/mais-procurados/honda-civic/main.jpg",
-    images: [
-      {
-        url: "/images/fleet/mais-procurados/honda-civic/frontal.jpg",
-        alt: "Honda Civic - Vista frontal"
-      },
-      {
-        url: "/images/fleet/mais-procurados/honda-civic/interior.jpg",
-        alt: "Honda Civic - Interior moderno"
-      }
-    ]
-  },
-  {
-    id: "mazda-cx5-2024",
-    name: "Mazda CX-5",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "SUV compacto com design premium. Perfeito equilíbrio entre conforto e praticidade.",
-    mainImage: "/images/fleet/mais-procurados/mazda-cx5/main.jpg",
-    images: [
-      {
-        url: "/images/fleet/mais-procurados/mazda-cx5/frontal.jpg",
-        alt: "Mazda CX-5 - Vista frontal"
-      },
-      {
-        url: "/images/fleet/mais-procurados/mazda-cx5/interior.jpg",
-        alt: "Mazda CX-5 - Interior"
-      }
-    ]
-  },
-  // ⚠️ ADICIONE AQUI OS OUTROS 17 CARROS POPULARES
-];
 
+  // SUV
+  {
+    id: "nissan-patrol-nismo",
+    name: "Nissan Patrol Nismo",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Versão esportiva do Patrol, com motor V8 5.6L de 428 cv, suspensão Bilstein e detalhes exclusivos NISMO.",
+    mainImage: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image1.jpg",
+    images: [
+      { url: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image2.jpg", alt: "Nissan Patrol Nismo - Frente" },
+      { url: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image4.jpg", alt: "Nissan Patrol Nismo - Interior" }
+    ]
+  },
+
+  // Muscle
+  {
+    id: "ford-mustang-shelby-gt500-2020",
+    name: "Ford Mustang Shelby GT500",
+    category: "Mais procurados",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "O Mustang mais potente já feito, com motor V8 Supercharged de 760 cv e desempenho brutal.",
+    mainImage: "/images/fleet/mais-procurados/ford-mustang-shelby/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image2.jpg", alt: "Mustang Shelby GT500 - Frente" },
+      { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image3.jpg", alt: "Mustang Shelby GT500 - Interior esportivo" }
+    ]
+  },
+
+  // Sedan
+  {
+    id: "mercedes-class-e-2021",
+    name: "Mercedes-Benz Classe E AMG Line",
+    category: "Mais procurados",
+    year: 2021,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Sedan executivo com sistema MBUX e design AMG Line. Combina luxo, desempenho e tecnologia avançada.",
+    mainImage: "/images/fleet/mais-procurados/mercedes-class-e/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/mercedes-class-e/image2.jpg", alt: "Mercedes Classe E - Frente" },
+      { url: "/images/fleet/mais-procurados/mercedes-class-e/image3.jpg", alt: "Mercedes Classe E - Interior" }
+    ]
+  },
+
+  // SUV
+  {
+    id: "toyota-bz4x",
+    name: "Toyota bZ4X",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Elétrico",
+    description: "SUV elétrico da Toyota com até 450 km de autonomia. Tecnologia avançada e design futurista.",
+    mainImage: "/images/fleet/suv/Toyota-bZ4X/image1.jpg",
+    images: [
+      { url: "/images/fleet/suv/Toyota-bZ4X/image2.jpg", alt: "Toyota bZ4X - Frente" },
+      { url: "/images/fleet/suv/Toyota-bZ4X/image4.jpg", alt: "Toyota bZ4X - Interior" }
+    ]
+  },
+
+  // Muscle
+  {
+    id: "dodge-challenger-hellcat-2023",
+    name: "Dodge Challenger SRT Hellcat",
+    category: "Mais procurados",
+    year: 2023,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Muscle car lendário com motor HEMI V8 de até 797 cv. Potência e design clássico americano.",
+    mainImage: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image2.jpg", alt: "Dodge Challenger Hellcat - Frente" },
+      { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image3.jpg", alt: "Dodge Challenger Hellcat - Interior" }
+    ]
+  },
+
+  // Carrinha
+  {
+    id: "chevrolet-silverado-1500-2020",
+    name: "Chevrolet Silverado 1500",
+    category: "Mais procurados",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Diesel",
+    description: "Pickup robusta com motor V8 ou turbo-diesel. Capacidade de reboque de até 6.033 kg e conforto de sobra.",
+    mainImage: "/images/fleet/mais-procurados/chevrolet-silverado/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/chevrolet-silverado/image2.jpg", alt: "Chevrolet Silverado 1500 - Frente" },
+      { url: "/images/fleet/mais-procurados/chevrolet-silverado/image3.jpg", alt: "Chevrolet Silverado 1500 - Traseira" }
+    ]
+  },
+
+  // Sedan
+  {
+    id: "kia-optima-2019",
+    name: "Kia Optima",
+    category: "Mais procurados",
+    year: 2019,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Sedan moderno e acessível, com Apple CarPlay, Android Auto e ótimo conforto.",
+    mainImage: "/images/fleet/mais-procurados/kia-optima/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/kia-optima/image2.jpg", alt: "Kia Optima - Frente" },
+      { url: "/images/fleet/mais-procurados/kia-optima/image3.jpg", alt: "Kia Optima - Interior" }
+    ]
+  },
+
+  // SUV
+  {
+    id: "gmc-acadia-at4-2024",
+    name: "GMC Acadia AT4",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "SUV com design robusto e motor turbo 2.5L de 328 cv. Focado em desempenho off-road com tração integral.",
+    mainImage: "/images/fleet/suv/GMC-Acadia-AT4/image1.jpg",
+    images: [
+      { url: "/images/fleet/suv/GMC-Acadia-AT4/image2.jpg", alt: "GMC Acadia AT4 - Vista frontal" },
+      { url: "/images/fleet/suv/GMC-Acadia-AT4/image4.jpg", alt: "GMC Acadia AT4 - Interior" }
+    ]
+  },
+
+  // Muscle
+  {
+    id: "ford-mustang-dark-horse-2024",
+    name: "Ford Mustang Dark Horse",
+    category: "Mais procurados",
+    year: 2024,
+    transmission: "Manual",
+    fuel: "Gasolina",
+    description: "O novo Mustang Dark Horse combina tradição e força com motor V8 5.0L e design moderno.",
+    mainImage: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image2.jpg", alt: "Ford Mustang Dark Horse - Frente" },
+      { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image3.jpg", alt: "Ford Mustang Dark Horse - Interior" }
+    ]
+  },
+
+  // SUV
+  {
+    id: "kia-telluride-2020",
+    name: "Kia Telluride",
+    category: "Mais procurados",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "SUV de três fileiras com motor V6 3.8L e interior premium. Ideal para famílias grandes com estilo.",
+    mainImage: "/images/fleet/suv/Kia-Telluride-2020/image1.jpg",
+    images: [
+      { url: "/images/fleet/suv/Kia-Telluride-2020/image2.jpg", alt: "Kia Telluride - Frente" },
+      { url: "/images/fleet/suv/Kia-Telluride-2020/image4.jpg", alt: "Kia Telluride - Interior" }
+    ]
+  },
+
+  // Carrinha
+  {
+    id: "toyota-coaster-2025",
+    name: "Toyota Coaster",
+    category: "Mais procurados",
+    year: 2025,
+    transmission: "Manual",
+    fuel: "Diesel",
+    description: "Micro-ônibus robusto com capacidade para 30 passageiros. Ideal para viagens longas e transporte urbano.",
+    mainImage: "/images/fleet/mais-procurados/toyota-coaster/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/toyota-coaster/image2.jpg", alt: "Toyota Coaster - Frente" },
+      { url: "/images/fleet/mais-procurados/toyota-coaster/image3.jpg", alt: "Toyota Coaster - Interior espaçoso" }
+    ]
+  },
+
+  // Sedan
+  {
+    id: "genesis-g70-2026",
+    name: "Genesis G70",
+    category: "Mais procurados",
+    year: 2026,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Sedan esportivo de luxo com motor V6 biturbo de 365 cv. Mistura elegância, conforto e desempenho.",
+    mainImage: "/images/fleet/mais-procurados/genesis-g70/image1.jpg",
+    images: [
+      { url: "/images/fleet/mais-procurados/genesis-g70/image2.jpg", alt: "Genesis G70 - Vista frontal" },
+      { url: "/images/fleet/mais-procurados/genesis-g70/image3.jpg", alt: "Genesis G70 - Interior refinado" }
+    ]
+  }
+];
 // ============================================
 // EXPORTAÇÕES
 // ============================================
 
 // Todos os 100 carros (usado na página Fleet com filtros)
 export const cars: Car[] = [
-  ...sedans,
-  ...suvs,
-  ...carrinhas,
   ...muscles,
+  ...suvs,
+  ...sedans,
+  ...carrinhas,
   ...maisProc,
 ];
 
