@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,8 @@ const vehicles = [
 ];
 
 const FleetSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="frota" className="bg-primary/5 py-24 md:py-28">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
@@ -66,20 +69,29 @@ const FleetSection = () => {
                 </div>
                 <div className="mt-auto flex justify-end">
                   <Button
-                    asChild
                     size="sm"
                     variant="ghost"
                     className="rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => navigate("/frota")}
                   >
-                    <a href="#contactos">
-                      Saber mais
-                      <ArrowUpRight className="ml-1.5 size-4" />
-                    </a>
+                    Saber mais
+                    <ArrowUpRight className="ml-1.5 size-4" />
                   </Button>
                 </div>
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button
+            size="lg"
+            className="rounded-full px-8 shadow-lg shadow-primary/20"
+            onClick={() => navigate("/frota")}
+          >
+            Veja a nossa frota aqui
+            <ArrowUpRight className="ml-2 size-5" />
+          </Button>
         </div>
       </div>
     </section>
