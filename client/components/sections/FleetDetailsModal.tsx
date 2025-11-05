@@ -49,7 +49,7 @@ const FleetDetailsModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-4xl gap-0 overflow-y-auto p-0 sm:rounded-2xl">
+      <DialogContent className="max-w-5xl gap-0 overflow-y-auto p-0 sm:rounded-2xl max-h-[90vh]">
         <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
           {/* Image Gallery */}
           <div className="flex flex-col bg-gradient-to-br from-slate-100 to-slate-50">
@@ -110,7 +110,7 @@ const FleetDetailsModal = ({
           </div>
 
           {/* Details Section */}
-          <div className="flex flex-col p-6 md:p-8">
+          <div className="flex flex-col p-6 md:p-8 overflow-y-auto max-h-[90vh] md:max-h-auto">
             <DialogHeader className="mb-6">
               <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/80">
                 {car.category}
@@ -126,7 +126,7 @@ const FleetDetailsModal = ({
 
             {/* Specifications */}
             <div className="mb-8 space-y-4">
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl bg-primary/5 p-4">
                   <p className="text-xs font-semibold uppercase tracking-widest text-foreground/60">
                     Ano
