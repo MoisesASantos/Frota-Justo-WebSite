@@ -23,313 +23,95 @@ export const categories = [
   "Mais procurados",
 ];
 
+const sedans: Car[] = Array.from({ length: 20 }, (_, i) => ({
+  id: `sedan-${i + 1}`,
+  name: `${["Mercedes-Benz Classe S", "BMW M340i", "Audi A4", "Tesla Model S", "Lexus LS", "Porsche Panamera", "Jaguar XE", "Infiniti Q50", "Genesis G80", "Cadillac CT5", "Lincoln Continental", "Acura TLX", "Volvo S90", "Polestar 1", "Alfa Romeo Giulia", "Maserati Ghibli", "Tesla Model 3", "Hyundai Ioniq", "Kia Stinger", "BMW 740i"][i % 20]}`
+  ,
+  category: "Sedan",
+  year: 2023 + Math.floor(i / 10),
+  transmission: i % 2 === 0 ? "Automática" : "Automática",
+  fuel: ["Gasolina", "Diesel", "Híbrido", "Elétrico"][i % 4],
+  description: "Elegância executiva. O sedan perfeito para transferências corporativas e eventos especiais.",
+  mainImage: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
+  images: [
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200", alt: "Vista frontal" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200", alt: "Interior" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200", alt: "Vista traseira" },
+  ],
+}));
+
+const suvs: Car[] = Array.from({ length: 20 }, (_, i) => ({
+  id: `suv-${i + 1}`,
+  name: `${["Range Rover Sport", "Mercedes-Benz G63", "BMW X7", "Porsche Cayenne", "Audi Q8", "Tesla Model X", "Lexus RX", "Land Rover Discovery", "Jeep Grand Cherokee", "Cadillac Escalade", "Lincoln Navigator", "Infiniti QX80", "Volvo XC90", "BMW X5", "Audi Q7", "Mercedes-Benz GLE", "Porsche Macan", "Range Rover Evoque", "Jeep Wrangler", "Toyota 4Runner"][i % 20]}`
+  ,
+  category: "SUV",
+  year: 2023 + Math.floor(i / 10),
+  transmission: i % 2 === 0 ? "Automática" : "Automática",
+  fuel: ["Gasolina", "Diesel", "Híbrido", "Elétrico"][i % 4],
+  description: "O SUV de luxo perfeito para explorar Dubai com estilo e conforto máximo.",
+  mainImage: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
+  images: [
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista frontal" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Interior" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista traseira" },
+  ],
+}));
+
+const carrinhas: Car[] = Array.from({ length: 20 }, (_, i) => ({
+  id: `carrinha-${i + 1}`,
+  name: `${["Chevrolet Silverado", "Ford Transit", "Ford F-150", "Ram 1500", "GMC Sierra", "Toyota Tundra", "Nissan Titan", "Dodge Ram", "Volkswagen Transporter", "Mercedes Sprinter", "Ford E-Transit", "Fiat Ducato", "Iveco Daily", "Renault Master", "Peugeot Boxer", "Ford Transit Connect", "Nissan NV200", "Vauxhall Movano", "MAN TGE", "Hyundai H350"][i % 20]}`
+  ,
+  category: "Carrinhas",
+  year: 2023 + Math.floor(i / 10),
+  transmission: i % 2 === 0 ? "Automática" : "Manual",
+  fuel: ["Gasolina", "Diesel"][i % 2],
+  description: "Van comercial confiável. Espaço, eficiência e durabilidade comprovada.",
+  mainImage: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
+  images: [
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista frontal" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Interior" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista traseira" },
+  ],
+}));
+
+const muscles: Car[] = Array.from({ length: 20 }, (_, i) => ({
+  id: `muscle-${i + 1}`,
+  name: `${["Dodge Challenger", "Chevrolet Corvette", "Ford Mustang", "Dodge Charger", "Chevrolet Camaro", "Pontiac GTO", "Plymouth Barracuda", "Oldsmobile 442", "Buick GSX", "AMC Javelin", "Hemi Cuda", "Boss Mustang", "Super Bee", "Road Runner", "Judge", "Firebird", "Monza", "Starfire", "Cutlass", "Ranchero"][i % 20]}`
+  ,
+  category: "Muscle",
+  year: 2023 + Math.floor(i / 10),
+  transmission: "Automática",
+  fuel: "Gasolina",
+  description: "Muscle car lendário com power e presença. Para os que querem ser notados.",
+  mainImage: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
+  images: [
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200", alt: "Vista frontal" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200", alt: "Interior" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200", alt: "Vista traseira" },
+  ],
+}));
+
+const maisProc: Car[] = Array.from({ length: 20 }, (_, i) => ({
+  id: `mais-procurados-${i + 1}`,
+  name: `${["Honda Civic", "Toyota Corolla", "Mazda 3", "Hyundai Elantra", "Kia Forte", "Subaru Legacy", "Nissan Altima", "Honda Accord", "Toyota Camry", "Mazda CX-5", "Honda CR-V", "Toyota RAV4", "Nissan Qashqai", "Hyundai Santa Fe", "Kia Sorento", "Subaru Outback", "Nissan Murano", "Toyota Highlander", "Honda Pilot", "Mazda CX-9"][i % 20]}`
+  ,
+  category: "Mais procurados",
+  year: 2023 + Math.floor(i / 10),
+  transmission: i % 2 === 0 ? "Automática" : "Manual",
+  fuel: ["Gasolina", "Diesel", "Híbrido"][i % 3],
+  description: "Os carros mais populares e confiáveis. Perfeitos para o dia a dia com qualidade garantida.",
+  mainImage: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
+  images: [
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista frontal" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Interior" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200", alt: "Vista traseira" },
+  ],
+}));
+
 export const cars: Car[] = [
-  {
-    id: "range-rover-sport-2025",
-    name: "Range Rover Sport 2025",
-    category: "SUV",
-    year: 2025,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "O SUV de luxo perfeito para explorar Dubai com estilo e conforto máximo.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Range Rover Sport Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Range Rover Sport Vista lateral",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Range Rover Sport Interior",
-      },
-    ],
-  },
-  {
-    id: "mercedes-benz-s-class",
-    name: "Mercedes-Benz Classe S",
-    category: "Sedan",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "Elegância executiva. O sedan perfeito para transferências corporativas e eventos especiais.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Mercedes-Benz Classe S Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Mercedes-Benz Classe S Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Mercedes-Benz Classe S Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "mercedes-g63",
-    name: "Mercedes-Benz G63",
-    category: "SUV",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "O ícone das pistas e das cidades. Potência bruta com design icónico.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=1200",
-        alt: "Mercedes-Benz G63 Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=1200",
-        alt: "Mercedes-Benz G63 Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F1a79150f81114f61a1aba3e3e6df623a?format=webp&width=1200",
-        alt: "Mercedes-Benz G63 Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "dodge-challenger",
-    name: "Dodge Challenger",
-    category: "Muscle",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Muscle car lendário com power e presença. Para os que querem ser notados.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Dodge Challenger Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Dodge Challenger Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Dodge Challenger Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "bmw-m340i",
-    name: "BMW M340i",
-    category: "Sedan",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "Performance e elegância em um sedan compacto. Para quem quer dinamismo e conforto.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "BMW M340i Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "BMW M340i Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "BMW M340i Vista lateral",
-      },
-    ],
-  },
-  {
-    id: "audi-a4",
-    name: "Audi A4",
-    category: "Sedan",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Tecnologia avançada e design alemão de qualidade. O sedan inteligente.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Audi A4 Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Audi A4 Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Audi A4 Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "tesla-model-s",
-    name: "Tesla Model S",
-    category: "Sedan",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Elétrico",
-    description:
-      "O futuro é agora. Sedã elétrico com performance devastadora e tecnologia de ponta.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Tesla Model S Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Tesla Model S Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2Fe30d959f2c9f4f00a867bb726f3725ff?format=webp&width=1200",
-        alt: "Tesla Model S Vista lateral",
-      },
-    ],
-  },
-  {
-    id: "porsche-cayenne",
-    name: "Porsche Cayenne",
-    category: "SUV",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Performance no DNA. Um SUV que é um desportivo sobre rodas.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Porsche Cayenne Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Porsche Cayenne Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Porsche Cayenne Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "chevrolet-silverado",
-    name: "Chevrolet Silverado",
-    category: "Carrinhas",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "Pickup americana robusta. Capacidade de carga e conforto para trabalho ou aventura.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Chevrolet Silverado Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Chevrolet Silverado Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Chevrolet Silverado Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "ford-transit",
-    name: "Ford Transit",
-    category: "Carrinhas",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Diesel",
-    description: "Van comercial confiável. Espaço, eficiência e durabilidade comprovada.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Ford Transit Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Ford Transit Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "Ford Transit Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "chevrolet-corvette",
-    name: "Chevrolet Corvette",
-    category: "Muscle",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "Lenda americana. Desportivo puro com performance de supercar a preço acessível.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Chevrolet Corvette Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Chevrolet Corvette Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F83138d1d94f14893b0ff948730e4262a?format=webp&width=1200",
-        alt: "Chevrolet Corvette Vista traseira",
-      },
-    ],
-  },
-  {
-    id: "bmw-x7",
-    name: "BMW X7",
-    category: "SUV",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description:
-      "Luxo em forma de SUV grande. Espaço para 7 passageiros com conforto de primeira classe.",
-    mainImage:
-      "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=800",
-    images: [
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "BMW X7 Vista frontal",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "BMW X7 Interior",
-      },
-      {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F8967826605a24ba7a731600e4d32f07f?format=webp&width=1200",
-        alt: "BMW X7 Vista traseira",
-      },
-    ],
-  },
+  ...sedans,
+  ...suvs,
+  ...carrinhas,
+  ...muscles,
+  ...maisProc,
 ];
