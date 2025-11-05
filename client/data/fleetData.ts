@@ -561,12 +561,13 @@ const carrinhas: Car[] = [
     {
     id: "toyota-coaster-2025",
     name: "Toyota Coaster",
-    category: "Micro-ônibus",
+    category: "Carrinhas",
     year: 2025,
     transmission: "Manual",
     fuel: "Diesel",
     description: "É um micro-ônibus robusto e confiável, projetado para oferecer conforto e segurança. Tem capacidade para 30 passageiros e é flexível para viagens longas e deslocações urbanas. O modelo de 2025 está disponível para venda em vários locais, incluindo Angola e Dubai. Algumas versões vêm com ar condicionado, portas de correr duplas e um motor diesel de 4.0L. A suspensão, o radiador e o ar condicionado são reforçados, tornando-o adequado para ambientes tropicais.",
     mainImage: "/images/fleet/Carrinhas/Coaster/image1.jpg",
+    featured: true,
     images: [
       {
         url: "/images/fleet/Carrinhas/Coaster/image2.jpg",
@@ -726,7 +727,7 @@ const muscles: Car[] = [
 const maisProc: Car[] = [
   // SUV
   {
-    id: "dodge-durango-srt",
+    id: "dodge-durango-srt-featured",
     name: "Dodge Durango SRT",
     category: "Mais procurados",
     year: 2024,
@@ -737,13 +738,14 @@ const maisProc: Car[] = [
     featured: true,
     images: [
       { url: "/images/fleet/suv/Dogde-Durango/image2.jpg", alt: "Dodge Durango - Vista frontal" },
+      { url: "/images/fleet/suv/Dogde-Durango/image3.jpg", alt: "Dodge Durango - Lateral" },
       { url: "/images/fleet/suv/Dogde-Durango/image4.jpg", alt: "Dodge Durango - Interior" }
     ]
   },
 
   // Sedan
   {
-    id: "bmw-m3-competition-2025",
+    id: "bmw-m3-competition-2025-featured",
     name: "BMW M3 Competition",
     category: "Mais procurados",
     year: 2025,
@@ -753,13 +755,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/bmw-m3/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/bmw-m3/image2.jpg", alt: "BMW M3 Competition - Frente" },
-      { url: "/images/fleet/mais-procurados/bmw-m3/image3.jpg", alt: "BMW M3 Competition - Interior esportivo" }
+      { url: "/images/fleet/mais-procurados/bmw-m3/image3.jpg", alt: "BMW M3 Competition - Lateral" },
+      { url: "/images/fleet/mais-procurados/bmw-m3/image4.jpg", alt: "BMW M3 Competition - Interior esportivo" }
     ]
   },
 
   // Muscle
   {
-    id: "chevrolet-corvette-c8-2024",
+    id: "chevrolet-corvette-c8-2024-featured",
     name: "Chevrolet Corvette C8",
     category: "Mais procurados",
     year: 2024,
@@ -769,13 +772,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/chevrolet-corvette/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/chevrolet-corvette/image2.jpg", alt: "Chevrolet Corvette C8 - Vista frontal" },
-      { url: "/images/fleet/mais-procurados/chevrolet-corvette/image3.jpg", alt: "Chevrolet Corvette C8 - Interior esportivo" }
+      { url: "/images/fleet/mais-procurados/chevrolet-corvette/image3.jpg", alt: "Chevrolet Corvette C8 - Lateral" },
+      { url: "/images/fleet/mais-procurados/chevrolet-corvette/image4.jpg", alt: "Chevrolet Corvette C8 - Interior esportivo" }
     ]
   },
 
   // Carrinha
   {
-    id: "ford-transit-2024",
+    id: "ford-transit-2024-featured",
     name: "Ford Transit",
     category: "Mais procurados",
     year: 2024,
@@ -785,13 +789,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/ford-transit/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/ford-transit/image2.jpg", alt: "Ford Transit - Vista frontal" },
-      { url: "/images/fleet/mais-procurados/ford-transit/image3.jpg", alt: "Ford Transit - Interior funcional" }
+      { url: "/images/fleet/mais-procurados/ford-transit/image3.jpg", alt: "Ford Transit - Lateral" },
+      { url: "/images/fleet/mais-procurados/ford-transit/image4.jpg", alt: "Ford Transit - Interior funcional" }
     ]
   },
 
   // SUV
   {
-    id: "kia-sportage-2024-white",
+    id: "kia-sportage-2024-white-featured",
     name: "Kia Sportage Branco",
     category: "Mais procurados",
     year: 2024,
@@ -801,13 +806,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/suv/Kia-Sportage-2024-white/image1.jpg",
     images: [
       { url: "/images/fleet/suv/Kia-Sportage-2024-white/image2.jpg", alt: "Kia Sportage Branco - Frente" },
+      { url: "/images/fleet/suv/Kia-Sportage-2024-white/image3.jpg", alt: "Kia Sportage Branco - Lateral" },
       { url: "/images/fleet/suv/Kia-Sportage-2024-white/image4.jpg", alt: "Kia Sportage Branco - Interior" }
     ]
   },
 
   // Sedan
   {
-    id: "toyota-corolla-2024",
+    id: "toyota-corolla-2024-featured",
     name: "Toyota Corolla",
     category: "Mais procurados",
     year: 2024,
@@ -817,13 +823,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/toyota-corolla/main.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/toyota-corolla/frontal.jpg", alt: "Toyota Corolla - Vista frontal" },
+      { url: "/images/fleet/mais-procurados/toyota-corolla/lateral.jpg", alt: "Toyota Corolla - Lateral" },
       { url: "/images/fleet/mais-procurados/toyota-corolla/interior.jpg", alt: "Toyota Corolla - Interior confortável" }
     ]
   },
 
   // SUV
   {
-    id: "nissan-patrol-nismo",
+    id: "nissan-patrol-nismo-featured",
     name: "Nissan Patrol Nismo",
     category: "Mais procurados",
     year: 2024,
@@ -833,13 +840,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image1.jpg",
     images: [
       { url: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image2.jpg", alt: "Nissan Patrol Nismo - Frente" },
+      { url: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image3.jpg", alt: "Nissan Patrol Nismo - Lateral" },
       { url: "/images/fleet/suv/Nissan-Patrol-WhiteKit/image4.jpg", alt: "Nissan Patrol Nismo - Interior" }
     ]
   },
 
   // Muscle
   {
-    id: "ford-mustang-shelby-gt500-2020",
+    id: "ford-mustang-shelby-gt500-2020-featured",
     name: "Ford Mustang Shelby GT500",
     category: "Mais procurados",
     year: 2020,
@@ -849,13 +857,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/ford-mustang-shelby/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image2.jpg", alt: "Mustang Shelby GT500 - Frente" },
-      { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image3.jpg", alt: "Mustang Shelby GT500 - Interior esportivo" }
+      { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image3.jpg", alt: "Mustang Shelby GT500 - Lateral" },
+      { url: "/images/fleet/mais-procurados/ford-mustang-shelby/image4.jpg", alt: "Mustang Shelby GT500 - Interior esportivo" }
     ]
   },
 
   // Sedan
   {
-    id: "mercedes-class-e-2021",
+    id: "mercedes-class-e-2021-featured",
     name: "Mercedes-Benz Classe E AMG Line",
     category: "Mais procurados",
     year: 2021,
@@ -865,13 +874,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/mercedes-class-e/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/mercedes-class-e/image2.jpg", alt: "Mercedes Classe E - Frente" },
-      { url: "/images/fleet/mais-procurados/mercedes-class-e/image3.jpg", alt: "Mercedes Classe E - Interior" }
+      { url: "/images/fleet/mais-procurados/mercedes-class-e/image3.jpg", alt: "Mercedes Classe E - Lateral" },
+      { url: "/images/fleet/mais-procurados/mercedes-class-e/image4.jpg", alt: "Mercedes Classe E - Interior" }
     ]
   },
 
   // SUV
   {
-    id: "toyota-bz4x",
+    id: "toyota-bz4x-featured",
     name: "Toyota bZ4X",
     category: "Mais procurados",
     year: 2024,
@@ -881,13 +891,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/suv/Toyota-bZ4X/image1.jpg",
     images: [
       { url: "/images/fleet/suv/Toyota-bZ4X/image2.jpg", alt: "Toyota bZ4X - Frente" },
+      { url: "/images/fleet/suv/Toyota-bZ4X/image3.jpg", alt: "Toyota bZ4X - Lateral" },
       { url: "/images/fleet/suv/Toyota-bZ4X/image4.jpg", alt: "Toyota bZ4X - Interior" }
     ]
   },
 
   // Muscle
   {
-    id: "dodge-challenger-hellcat-2023",
+    id: "dodge-challenger-hellcat-2023-featured",
     name: "Dodge Challenger SRT Hellcat",
     category: "Mais procurados",
     year: 2023,
@@ -897,13 +908,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image2.jpg", alt: "Dodge Challenger Hellcat - Frente" },
-      { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image3.jpg", alt: "Dodge Challenger Hellcat - Interior" }
+      { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image3.jpg", alt: "Dodge Challenger Hellcat - Lateral" },
+      { url: "/images/fleet/mais-procurados/dodge-challenger-hellcat/image4.jpg", alt: "Dodge Challenger Hellcat - Interior" }
     ]
   },
 
   // Carrinha
   {
-    id: "chevrolet-silverado-1500-2020",
+    id: "chevrolet-silverado-1500-2020-featured",
     name: "Chevrolet Silverado 1500",
     category: "Mais procurados",
     year: 2020,
@@ -913,13 +925,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/chevrolet-silverado/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/chevrolet-silverado/image2.jpg", alt: "Chevrolet Silverado 1500 - Frente" },
-      { url: "/images/fleet/mais-procurados/chevrolet-silverado/image3.jpg", alt: "Chevrolet Silverado 1500 - Traseira" }
+      { url: "/images/fleet/mais-procurados/chevrolet-silverado/image3.jpg", alt: "Chevrolet Silverado 1500 - Lateral" },
+      { url: "/images/fleet/mais-procurados/chevrolet-silverado/image4.jpg", alt: "Chevrolet Silverado 1500 - Traseira" }
     ]
   },
 
   // Sedan
   {
-    id: "kia-optima-2019",
+    id: "kia-optima-2019-featured",
     name: "Kia Optima",
     category: "Mais procurados",
     year: 2019,
@@ -929,13 +942,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/kia-optima/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/kia-optima/image2.jpg", alt: "Kia Optima - Frente" },
-      { url: "/images/fleet/mais-procurados/kia-optima/image3.jpg", alt: "Kia Optima - Interior" }
+      { url: "/images/fleet/mais-procurados/kia-optima/image3.jpg", alt: "Kia Optima - Lateral" },
+      { url: "/images/fleet/mais-procurados/kia-optima/image4.jpg", alt: "Kia Optima - Interior" }
     ]
   },
 
   // SUV
   {
-    id: "gmc-acadia-at4-2024",
+    id: "gmc-acadia-at4-2024-featured",
     name: "GMC Acadia AT4",
     category: "Mais procurados",
     year: 2024,
@@ -945,13 +959,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/suv/GMC-Acadia-AT4/image1.jpg",
     images: [
       { url: "/images/fleet/suv/GMC-Acadia-AT4/image2.jpg", alt: "GMC Acadia AT4 - Vista frontal" },
+      { url: "/images/fleet/suv/GMC-Acadia-AT4/image3.jpg", alt: "GMC Acadia AT4 - Lateral" },
       { url: "/images/fleet/suv/GMC-Acadia-AT4/image4.jpg", alt: "GMC Acadia AT4 - Interior" }
     ]
   },
 
   // Muscle
   {
-    id: "ford-mustang-dark-horse-2024",
+    id: "ford-mustang-dark-horse-2024-featured",
     name: "Ford Mustang Dark Horse",
     category: "Mais procurados",
     year: 2024,
@@ -961,13 +976,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image2.jpg", alt: "Ford Mustang Dark Horse - Frente" },
-      { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image3.jpg", alt: "Ford Mustang Dark Horse - Interior" }
+      { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image3.jpg", alt: "Ford Mustang Dark Horse - Lateral" },
+      { url: "/images/fleet/mais-procurados/ford-mustang-dark-horse/image4.jpg", alt: "Ford Mustang Dark Horse - Interior" }
     ]
   },
 
   // SUV
   {
-    id: "kia-telluride-2020",
+    id: "kia-telluride-2020-featured",
     name: "Kia Telluride",
     category: "Mais procurados",
     year: 2020,
@@ -977,13 +993,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/suv/Kia-Telluride-2020/image1.jpg",
     images: [
       { url: "/images/fleet/suv/Kia-Telluride-2020/image2.jpg", alt: "Kia Telluride - Frente" },
+      { url: "/images/fleet/suv/Kia-Telluride-2020/image3.jpg", alt: "Kia Telluride - Lateral" },
       { url: "/images/fleet/suv/Kia-Telluride-2020/image4.jpg", alt: "Kia Telluride - Interior" }
     ]
   },
 
   // Carrinha
   {
-    id: "toyota-coaster-2025",
+    id: "toyota-coaster-2025-featured",
     name: "Toyota Coaster",
     category: "Mais procurados",
     year: 2025,
@@ -993,13 +1010,14 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/toyota-coaster/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/toyota-coaster/image2.jpg", alt: "Toyota Coaster - Frente" },
-      { url: "/images/fleet/mais-procurados/toyota-coaster/image3.jpg", alt: "Toyota Coaster - Interior espaçoso" }
+      { url: "/images/fleet/mais-procurados/toyota-coaster/image3.jpg", alt: "Toyota Coaster - Lateral" },
+      { url: "/images/fleet/mais-procurados/toyota-coaster/image4.jpg", alt: "Toyota Coaster - Interior espaçoso" }
     ]
   },
 
   // Sedan
   {
-    id: "genesis-g70-2026",
+    id: "genesis-g70-2026-featured",
     name: "Genesis G70",
     category: "Mais procurados",
     year: 2026,
@@ -1009,7 +1027,8 @@ const maisProc: Car[] = [
     mainImage: "/images/fleet/mais-procurados/genesis-g70/image1.jpg",
     images: [
       { url: "/images/fleet/mais-procurados/genesis-g70/image2.jpg", alt: "Genesis G70 - Vista frontal" },
-      { url: "/images/fleet/mais-procurados/genesis-g70/image3.jpg", alt: "Genesis G70 - Interior refinado" }
+      { url: "/images/fleet/mais-procurados/genesis-g70/image3.jpg", alt: "Genesis G70 - Lateral" },
+      { url: "/images/fleet/mais-procurados/genesis-g70/image4.jpg", alt: "Genesis G70 - Interior refinado" }
     ]
   }
 ];

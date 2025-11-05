@@ -26,17 +26,23 @@ const FleetDetailsModal = ({
 
   if (!car) return null;
 
-  const currentImage = car.images[currentImageIndex];
+  // Combina mainImage com as outras imagens para criar galeria completa
+  const allImages = [
+    { url: car.mainImage, alt: `${car.name} - Imagem principal` },
+    ...car.images
+  ];
+
+  const currentImage = allImages[currentImageIndex];
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? car.images.length - 1 : prev - 1,
+      prev === 0 ? allImages.length - 1 : prev - 1,
     );
   };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === car.images.length - 1 ? 0 : prev + 1,
+      prev === allImages.length - 1 ? 0 : prev + 1,
     );
   };
 
@@ -62,7 +68,7 @@ const FleetDetailsModal = ({
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
               {/* Navigation Buttons */}
-              {car.images.length > 1 && (
+              {allImages.length > 1 && (
                 <>
                   <button
                     type="button"
@@ -85,9 +91,9 @@ const FleetDetailsModal = ({
             </div>
 
             {/* Thumbnail Navigation */}
-            {car.images.length > 1 && (
+            {allImages.length > 1 && (
               <div className="flex gap-2 border-t border-border/40 bg-white/50 p-4 backdrop-blur">
-                {car.images.map((image, index) => (
+                {allImages.map((image, index) => (
                   <button
                     key={index}
                     type="button"
