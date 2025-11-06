@@ -12,7 +12,17 @@ async function buildNetlifyFunction() {
     fs.mkdirSync(outDir, { recursive: true });
   }
 
+  // Limpar apenas os arquivos .js e .cjs antigos
+  const files = fs.readdirSync(outDir);
+  files.forEach(file => {
+    if (file.endsWith('.js') || file.endsWith('.cjs') || file.endsWith('.mjs')) {
+      fs.unlinkSync(path.join(outDir, file));
+    }
+  });
+
   await build({
+    configFile: false, // Não usar vite.config.ts
+    publicDir: false, // Não copiar arquivos públicos
     build: {
       outDir,
       lib: {
@@ -29,13 +39,30 @@ async function buildNetlifyFunction() {
           'esbuild',
           'path',
           'url',
-          'fs'
-        ]
+          'fs',
+          'http',
+          'https',
+          'crypto',
+          'stream',
+          'util',
+          'events',
+          'buffer',
+          'querystring',
+        ],
+        output: {
+          format: 'cjs',
+        }
       },
       ssr: true,
       emptyOutDir: false,
       minify: false
-    }
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '../client'),
+        '@shared': path.resolve(__dirname, '../shared'),
+      },
+    },
   });
   
   console.log('✓ Netlify function built successfully');
