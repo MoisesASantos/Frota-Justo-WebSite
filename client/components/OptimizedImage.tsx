@@ -24,20 +24,39 @@ const OptimizedImage = ({
     onLoad?.();
   };
 
+  // Gera versões WebP e fallback
+  const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  const hasFallback = src !== webpSrc;
+
   return (
     <div className="relative w-full h-full">
       {!isLoaded && (
         <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-100 animate-pulse" />
       )}
-      <img
-        src={src}
-        alt={alt}
-        className={`${className} ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
-        loading={loading}
-        decoding="async"
-        fetchPriority={fetchPriority}
-        onLoad={handleLoad}
-      />
+      {hasFallback ? (
+        <picture>
+          <source srcSet={webpSrc} type="image/webp" />
+          <img
+            src={src}
+            alt={alt}
+            className={`${className} ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+            loading={loading}
+            decoding="async"
+            fetchPriority={fetchPriority}
+            onLoad={handleLoad}
+          />
+        </picture>
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          className={`${className} ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+          loading={loading}
+          decoding="async"
+          fetchPriority={fetchPriority}
+          onLoad={handleLoad}
+        />
+      )}
     </div>
   );
 };

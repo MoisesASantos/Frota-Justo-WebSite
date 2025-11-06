@@ -31,9 +31,9 @@
 
 ### 1. **Google Search Console** (PRIORITÁRIO)
 1. Acesse: https://search.google.com/search-console
-2. Adicione a propriedade: `https://www.frotajusto.com`
+2. Adicione a propriedade: `https://www.frotajusto-sarteday.com`
 3. Verifique a propriedade (método recomendado: HTML tag ou DNS)
-4. Submeta o sitemap: `https://www.frotajusto.com/sitemap.xml`
+4. Submeta o sitemap: `https://www.frotajusto-sarteday.com/sitemap.xml`
 5. Solicite indexação da página principal
 6. Monitore erros e performance
 
@@ -46,7 +46,7 @@
    - Localização: Dubai, UAE
    - Telefone: +244 930 515 127
    - Email: frotajustolda@hotmail.com
-   - Website: https://www.frotajusto.com
+   - Website: https://www.frotajusto-sarteday.com
    - Horário: 24/7
 3. Adicione fotos da frota (pasta /images/fleet)
 4. Verifique o negócio
