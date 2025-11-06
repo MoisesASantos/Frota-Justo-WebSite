@@ -22,7 +22,7 @@ const FounderSection = () => {
     }, 3000); // Troca a cada 3 segundos
 
     return () => clearInterval(interval);
-  }, []);
+  }, [ceoImages.length]);
   return (
     <section
       id="fundador"

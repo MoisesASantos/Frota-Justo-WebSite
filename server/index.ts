@@ -11,7 +11,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 export const app = express();
 
-async function setupApp() {
+export async function setupApp() {
   // Adicionar compressão gzip para todas as respostas
   app.use(compression());
   
