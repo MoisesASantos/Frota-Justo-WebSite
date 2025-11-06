@@ -19,7 +19,7 @@ export interface Car {
 export const categories = [
   "Sedan",
   "SUV",
-  "Carrinhas",
+  "Carrinhas & Vans",
   "Muscle",
   "Outros",
 ];
@@ -589,6 +589,127 @@ const suvs: Car[] = [
       { url: "/images/fleet/SUV/Toyota-RAV4-2019/image3.jpg", alt: "Toyota RAV4 - Lateral" },
       { url: "/images/fleet/SUV/Toyota-RAV4-2019/image4.jpg", alt: "Toyota RAV4 - Interior" }
     ]
+  },
+  {
+    id: "hyundai-santa-fe-2022",
+    name: "Hyundai Santa Fe",
+    category: "SUV",
+    year: 2022,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Hyundai Santa Fe 2022, SUV de cinco lugares com design moderno e robusto. Motor base de 2.5L com 191 cavalos de potência, com opções de motor turbo 2.5L (281 cv) e versões híbridas e plug-in híbridas disponíveis. Níveis de acabamento incluem SE, SEL, XRT, Limited e Calligraphy, oferecendo diversas opções de conforto e tecnologia. SUV versátil ideal para família.",
+    mainImage: "/images/fleet/SUV/Hyundai-Santa-Fe/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Hyundai-Santa-Fe/image2.jpg", alt: "Hyundai Santa Fe - Vista lateral" }
+    ]
+  },
+  {
+    id: "kia-sedona-2017",
+    name: "Kia Sedona",
+    category: "SUV",
+    year: 2017,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Sedona (conhecido como Kia Carnival em alguns mercados), minivan que se destaca pelo design agradável, desempenho e lista completa de recursos. Motor com 276 cavalos de potência em todas as versões. Banco do condutor ajustável em 8 direções, volante e manípulo das mudanças revestidos a couro. Com manutenção adequada, pode durar entre 200.000 a 300.000 milhas (320.000 a 480.000 km). Excelente opção para famílias que valorizam espaço e conforto.",
+    mainImage: "/images/fleet/SUV/Kia-Sedona/image1.jpg",
+    images: []
+  },
+  {
+    id: "kia-sorento-branco-2019",
+    name: "Kia Sorento Branco",
+    category: "SUV",
+    year: 2019,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Sorento 2019 na cor branca, SUV de sete passageiros com estilo e conforto destacados pelos consumidores. Disponível com motor 2.4L I-4 de 185 cavalos de potência ou motor 3.3L V6 de 290 cavalos de potência. Versões incluem L, LX, LX V6, S V6, EX V6, EX Sport V6, SX V6 e SX-Limited V6, oferecendo diversas opções de equipamento e tecnologia para atender diferentes necessidades.",
+    mainImage: "/images/fleet/SUV/Kia-Sorento-Branco/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Kia-Sorento-Branco/image2.jpg", alt: "Kia Sorento Branco - Vista frontal" },
+      { url: "/images/fleet/SUV/Kia-Sorento-Branco/image3.jpg", alt: "Kia Sorento Branco - Lateral" }
+    ]
+  },
+  {
+    id: "kia-soul-black-2020",
+    name: "Kia Soul Preto",
+    category: "SUV",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Soul Preto 2020, SUV subcompacto com design distinto e interior espaçoso. Motor 2.0L de quatro cilindros com 147 cavalos de potência e 132 lb-ft de torque. Modelo redesenhado em 2020 com novo exterior e interior, e funcionalidades de alta tecnologia incluindo ecrã tátil de 7 polegadas com Apple CarPlay e Android Auto. Disponível em níveis de acabamento LX, S, X-Line, GT-Line, EX e GT-Line Turbo.",
+    mainImage: "/images/fleet/SUV/Kia-Soul-Black/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Kia-Soul-Black/image3.jpg", alt: "Kia Soul Preto - Vista lateral" },
+      { url: "/images/fleet/SUV/Kia-Soul-Black/image4.jpg", alt: "Kia Soul Preto - Interior" }
+    ]
+  },
+  {
+    id: "kia-soul-amarelo-2020",
+    name: "Kia Soul Amarelo",
+    category: "SUV",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Soul Amarelo 2020, SUV subcompacto com design distinto e interior espaçoso. Motor 2.0L de quatro cilindros com 147 cavalos de potência e 132 lb-ft de torque. Modelo redesenhado em 2020 com novo exterior e interior, e funcionalidades de alta tecnologia incluindo ecrã tátil de 7 polegadas com Apple CarPlay e Android Auto. Disponível em níveis de acabamento LX, S, X-Line, GT-Line, EX e GT-Line Turbo.",
+    mainImage: "/images/fleet/SUV/Kia-Soul-Amarelo/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Kia-Soul-Amarelo/image2.jpg", alt: "Kia Soul Amarelo - Vista lateral" }
+    ]
+  },
+  {
+    id: "kia-soul-branco-2020",
+    name: "Kia Soul Branco",
+    category: "SUV",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Soul Branco 2020, SUV subcompacto com design distinto e interior espaçoso. Motor 2.0L de quatro cilindros com 147 cavalos de potência e 132 lb-ft de torque. Modelo redesenhado em 2020 com novo exterior e interior, e funcionalidades de alta tecnologia incluindo ecrã tátil de 7 polegadas com Apple CarPlay e Android Auto. Disponível em níveis de acabamento LX, S, X-Line, GT-Line, EX e GT-Line Turbo.",
+    mainImage: "/images/fleet/SUV/Kia-Soul-Branco/image1.jpg",
+    images: []
+  },
+  {
+    id: "kia-soul-vermelho-2020",
+    name: "Kia Soul Vermelho",
+    category: "SUV",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Kia Soul Vermelho 2020, SUV subcompacto com design distinto e interior espaçoso. Motor 2.0L de quatro cilindros com 147 cavalos de potência e 132 lb-ft de torque. Modelo redesenhado em 2020 com novo exterior e interior, e funcionalidades de alta tecnologia incluindo ecrã tátil de 7 polegadas com Apple CarPlay e Android Auto. Disponível em níveis de acabamento LX, S, X-Line, GT-Line, EX e GT-Line Turbo.",
+    mainImage: "/images/fleet/SUV/Kia-Soul-Vermelho/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Kia-Soul-Vermelho/image2.jpg", alt: "Kia Soul Vermelho - Vista frontal" },
+      { url: "/images/fleet/SUV/Kia-Soul-Vermelho/image3.jpg", alt: "Kia Soul Vermelho - Vista lateral" },
+      { url: "/images/fleet/SUV/Kia-Soul-Vermelho/image4.jpg", alt: "Kia Soul Vermelho - Detalhes" },
+      { url: "/images/fleet/SUV/Kia-Soul-Vermelho/image5.jpg", alt: "Kia Soul Vermelho - Interior" },
+      { url: "/images/fleet/SUV/Kia-Soul-Vermelho/image6.jpg", alt: "Kia Soul Vermelho - Vista traseira" }
+    ]
+  },
+  {
+    id: "mitsubishi-pajero-full",
+    name: "Mitsubishi Pajero Full",
+    category: "SUV",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Mitsubishi Pajero Full (também conhecido como Montero em alguns mercados), SUV de grande porte conhecido pela sua excepcional capacidade off-road. Equipado com motor V6 3.8L, oferece robustez e confiabilidade em terrenos desafiadores. Design imponente e espaço interno generoso, ideal para aventuras e viagens longas. Popular mundialmente pela sua durabilidade e desempenho em todo tipo de terreno.",
+    mainImage: "/images/fleet/SUV/Mitsubishi-Pajero/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Mitsubishi-Pajero/image2.jpg", alt: "Mitsubishi Pajero - Vista frontal" },
+      { url: "/images/fleet/SUV/Mitsubishi-Pajero/image3.jpg", alt: "Mitsubishi Pajero - Lateral" },
+      { url: "/images/fleet/SUV/Mitsubishi-Pajero/image4.jpg", alt: "Mitsubishi Pajero - Interior espaçoso" }
+    ]
+  },
+  {
+    id: "nissan-kicks-2024",
+    name: "Nissan Kicks",
+    category: "SUV",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description: "Nissan Kicks 2024, SUV compacto com design moderno e excelente custo-benefício. Motor 1.6 flex que gera 113 cavalos de potência com etanol, transmissão automática CVT. Design moderno com faróis de LED, grade em preto brilhante e rodas de liga leve de 17 polegadas. Versão Exclusive oferece seis airbags, câmera 360°, alerta de colisão frontal com frenagem automática, detector de ponto cego, painel digital e central multimídia com Android Auto e Apple CarPlay. Porta-malas de 432 litros e espaço interno confortável para quatro adultos.",
+    mainImage: "/images/fleet/SUV/Nissan-Kicks-2024/image1.jpg",
+    images: [
+      { url: "/images/fleet/SUV/Nissan-Kicks-2024/image2.jpg", alt: "Nissan Kicks - Vista lateral" }
+    ]
   }
 ];
 // ============================================
@@ -598,7 +719,7 @@ const carrinhas: Car[] = [
     {
     id: "chevrolet-silverado-1500-2020",
     name: "Chevrolet Silverado 1500",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2020,
     transmission: "Automática",
     fuel: "Diesel",
@@ -622,7 +743,7 @@ const carrinhas: Car[] = [
     {
     id: "toyota-coaster-2025",
     name: "Toyota Coaster",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2025,
     transmission: "Manual",
     fuel: "Diesel",
@@ -647,7 +768,7 @@ const carrinhas: Car[] = [
   {
     id: "chevrolet-silverado-1500-high-country-2019",
     name: "Chevrolet Silverado 1500 High Country",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2019,
     transmission: "Automática",
     fuel: "Gasolina",
@@ -663,7 +784,7 @@ const carrinhas: Car[] = [
   {
     id: "hyundai-staria-2024",
     name: "Hyundai Staria",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2024,
     transmission: "Automática",
     fuel: "Diesel",
@@ -679,7 +800,7 @@ const carrinhas: Car[] = [
   {
     id: "toyota-alphard-2023",
     name: "Toyota Alphard",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2023,
     transmission: "Automática",
     fuel: "Gasolina",
@@ -695,7 +816,7 @@ const carrinhas: Car[] = [
   {
     id: "toyota-granvia-2022",
     name: "Toyota Granvia",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2022,
     transmission: "Automática",
     fuel: "Gasolina",
@@ -711,7 +832,7 @@ const carrinhas: Car[] = [
   {
     id: "toyota-land-cruiser-70-2024",
     name: "Toyota Land Cruiser Série 70",
-    category: "Carrinhas",
+    category: "Carrinhas & Vans",
     year: 2024,
     transmission: "Automática",
     fuel: "Diesel",
