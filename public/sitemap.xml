@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página Principal -->
   <url>
-    <loc>https://frotajusto.me/</loc>
-    <lastmod>2025-11-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.frotajusto.com/</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-ao" href="https://www.frotajusto.com/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.frotajusto.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.frotajusto.com/" />
   </url>
+  
+  <!-- Seção Sobre -->
   <url>
-    <loc>https://frotajusto.me/#sobre</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.frotajusto.com/#sobre</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+  
+  <!-- Seção Frota -->
   <url>
-    <loc>https://frotajusto.me/#servicos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.frotajusto.com/#frota</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
+  
+  <!-- Página Frota Completa -->
   <url>
-    <loc>https://frotajusto.me/#contactos</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.frotajusto.com/frota</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
+  
+  <!-- Seção Serviços -->
+  <url>
+    <loc>https://www.frotajusto.com/#servicos</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Seção Dubai -->
+  <url>
+    <loc>https://www.frotajusto.com/#dubai</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Seção Fundador -->
+  <url>
+    <loc>https://www.frotajusto.com/#fundador</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Seção Contactos -->
+  <url>
+    <loc>https://www.frotajusto.com/#contactos</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
 </urlset>
