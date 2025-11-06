@@ -86,7 +86,7 @@ const SiteFooter = () => {
             veículo ao planeamento da viagem, a Frota Justo acompanha cada
             detalhe com confiança e transparência.
           </p>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-foreground/70">
+          <div className="flex flex-col items-start gap-3 text-sm text-foreground/70">
             <span className="text-foreground/60">Siga-nos:</span>
             <a
               href="https://www.instagram.com/frotajustoofficial?utm_source=ig_web_button_share_sheet&igsh=aTVtcnNvNW4zMmlm"
@@ -134,7 +134,7 @@ const SiteFooter = () => {
                 key={item.target}
                 href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
                 onClick={(event) => handleNavClick(event, item.target)}
-                className="hover:text-foreground"
+                className="hover:text-primary"
               >
                 {item.label}
               </a>

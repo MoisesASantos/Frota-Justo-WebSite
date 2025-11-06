@@ -175,7 +175,7 @@ const FleetDetailsModal = ({
             <Button
               type="button"
               size="lg"
-              className="mt-auto w-full rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90"
+              className="mt-auto w-full rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 animate-pulse hover:animate-none"
               onClick={onRequestClick}
             >
               Solicitar

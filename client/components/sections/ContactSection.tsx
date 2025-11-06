@@ -149,7 +149,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="mt-2 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90"
+                className="mt-2 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 animate-pulse hover:animate-none"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Aguarde..." : "Enviar Mensagem"}

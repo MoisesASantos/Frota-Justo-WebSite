@@ -82,7 +82,7 @@ const FleetSection = () => {
         <div className="mt-12 flex justify-center">
           <Button
             size="lg"
-            className="rounded-full px-8 shadow-lg shadow-primary/20"
+            className="rounded-full px-8 shadow-lg shadow-primary/20 animate-pulse hover:animate-none"
             onClick={() => navigate("/frota")}
           >
             Veja a nossa frota aqui
