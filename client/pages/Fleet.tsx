@@ -1,20 +1,75 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FleetDetailsModal from "@/components/sections/FleetDetailsModal";
 import SectionHeading from "@/components/sections/SectionHeading";
-import { cars, categories, type Car, type CarImage } from "@/data/fleetData";
+import { cars, optimizedCars, categories, type Car, type CarImage } from "@/data/fleetData";
 
-// Função para embaralhar array (Fisher-Yates shuffle)
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
+// Componente de Card memoizado para evitar re-renders desnecessários
+const CarCard = memo(({ 
+  car, 
+  index, 
+  onCarClick 
+}: { 
+  car: Car; 
+  index: number; 
+  onCarClick: (car: Car) => void;
+}) => {
+  return (
+    <article
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-primary/10 bg-card shadow-md transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-1"
+    >
+      {/* Image Section */}
+      <div
+        className="relative aspect-square w-full cursor-pointer overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50"
+        onClick={() => onCarClick(car)}
+      >
+        <img
+          src={car.mainImage}
+          alt={car.name}
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          loading={index < 15 ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={index < 8 ? "high" : "auto"}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />
+      </div>
+
+      {/* Content Section */}
+      <div className="flex flex-1 flex-col gap-2 p-3 md:p-4">
+        <div>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary/80">
+            {car.category}
+          </span>
+          <h3 className="mt-1 text-sm font-semibold text-foreground line-clamp-2">
+            {car.name}
+          </h3>
+        </div>
+
+        {/* Specs Row */}
+        <div className="flex gap-2 text-xs text-foreground/60 flex-wrap">
+          <span className="font-medium">{car.year}</span>
+          <span className="text-foreground/40">•</span>
+          <span className="font-medium">{car.fuel}</span>
+          <span className="text-foreground/40">•</span>
+          <span className="font-medium">{car.transmission}</span>
+        </div>
+
+        {/* Action Button */}
+        <button
+          type="button"
+          onClick={() => onCarClick(car)}
+          className="mt-auto w-full rounded-lg bg-primary/10 px-3 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+        >
+          Ver detalhes
+        </button>
+      </div>
+    </article>
+  );
+});
+
+CarCard.displayName = "CarCard";
 
 const Fleet = () => {
   const navigate = useNavigate();
@@ -22,9 +77,6 @@ const Fleet = () => {
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Embaralhar carros uma única vez quando o componente monta
-  const randomizedCars = useMemo(() => shuffleArray(cars), []);
 
   // Selecionar apenas Muscle e SUVs Mercedes para o background
   const heroImages = cars
@@ -50,15 +102,15 @@ const Fleet = () => {
 
   const filteredCars =
     selectedCategory === null
-      ? randomizedCars
-      : randomizedCars.filter((car) => car.category === selectedCategory);
+      ? optimizedCars
+      : optimizedCars.filter((car) => car.category === selectedCategory);
 
-  const handleCarClick = (car: Car) => {
+  const handleCarClick = useCallback((car: Car) => {
     setSelectedCar(car);
     setIsModalOpen(true);
-  };
+  }, []);
 
-  const handleRequestClick = () => {
+  const handleRequestClick = useCallback(() => {
     setIsModalOpen(false);
     navigate("/");
     setTimeout(() => {
@@ -70,7 +122,7 @@ const Fleet = () => {
         });
       }
     }, 100);
-  };
+  }, [navigate]);
 
   return (
     <div className="flex flex-col">
@@ -146,56 +198,12 @@ const Fleet = () => {
           {filteredCars.length > 0 ? (
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {filteredCars.map((car, index) => (
-                <article
-                  key={car.id}
-                  className="group flex h-full flex-col overflow-hidden rounded-xl border border-primary/10 bg-card shadow-md transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-1"
-                >
-                  {/* Image Section */}
-                  <div
-                    className="relative aspect-square w-full cursor-pointer overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50"
-                    onClick={() => handleCarClick(car)}
-                  >
-                    <img
-                      src={car.mainImage}
-                      alt={car.name}
-                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                      loading={index < 10 ? "eager" : "lazy"}
-                      decoding="async"
-                      fetchPriority={index < 5 ? "high" : "auto"}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="flex flex-1 flex-col gap-2 p-3 md:p-4">
-                    <div>
-                      <span className="text-xs font-semibold uppercase tracking-widest text-primary/80">
-                        {car.category}
-                      </span>
-                      <h3 className="mt-1 text-sm font-semibold text-foreground line-clamp-2">
-                        {car.name}
-                      </h3>
-                    </div>
-
-                    {/* Specs Row */}
-                    <div className="flex gap-2 text-xs text-foreground/60 flex-wrap">
-                      <span className="font-medium">{car.year}</span>
-                      <span className="text-foreground/40">•</span>
-                      <span className="font-medium">{car.fuel}</span>
-                      <span className="text-foreground/40">•</span>
-                      <span className="font-medium">{car.transmission}</span>
-                    </div>
-
-                    {/* Action Button */}
-                    <button
-                      type="button"
-                      onClick={() => handleCarClick(car)}
-                      className="mt-auto w-full rounded-lg bg-primary/10 px-3 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                    >
-                      Ver detalhes
-                    </button>
-                  </div>
-                </article>
+                <CarCard 
+                  key={car.id} 
+                  car={car} 
+                  index={index} 
+                  onCarClick={handleCarClick}
+                />
               ))}
             </div>
           ) : (

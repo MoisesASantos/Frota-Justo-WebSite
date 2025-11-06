@@ -1,5 +1,5 @@
 # Frota Justo - Site Oficial
-# www.frotajusto.com
+# www.frotajusto-sarteday.com
 
 # Regras para todos os bots
 User-agent: *
@@ -51,7 +51,7 @@ User-agent: YandexBot
 Allow: /
 
 # Sitemap
-Sitemap: https://www.frotajusto.com/sitemap.xml
+Sitemap: https://www.frotajusto-sarteday.com/sitemap.xml
 
 # Host preferido
-Host: www.frotajusto.com
+Host: www.frotajusto-sarteday.com

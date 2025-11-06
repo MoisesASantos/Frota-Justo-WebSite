@@ -1,4 +1,5 @@
 import express from "express";
+import compression from "compression";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -11,6 +12,9 @@ const isProduction = process.env.NODE_ENV === "production";
 export const app = express();
 
 async function setupApp() {
+  // Adicionar compressão gzip para todas as respostas
+  app.use(compression());
+  
   if (!isProduction) {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -27,7 +31,18 @@ async function setupApp() {
 
   if (isProduction) {
     const publicPath = path.join(__dirname, "..", "public");
-    app.use(express.static(publicPath));
+    // Servir arquivos estáticos com cache headers
+    app.use(express.static(publicPath, {
+      maxAge: '1y',
+      etag: true,
+      lastModified: true,
+      setHeaders: (res, path) => {
+        // Cache mais agressivo para imagens
+        if (path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.png') || path.endsWith('.webp')) {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      }
+    }));
     app.get("*", (req, res) => {
       res.sendFile(path.join(publicPath, "index.html"));
     });

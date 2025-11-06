@@ -64,6 +64,8 @@ const FleetDetailsModal = ({
                 src={currentImage.url}
                 alt={currentImage.alt}
                 className="h-full w-full object-contain p-4"
+                loading="eager"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
