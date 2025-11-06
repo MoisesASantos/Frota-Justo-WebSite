@@ -21,7 +21,7 @@ export const categories = [
   "SUV",
   "Carrinhas",
   "Muscle",
-  "Mais procurados",
+  "Outros",
 ];
 
 // ============================================
@@ -187,6 +187,83 @@ const sedans: Car[] = [
       { url: "/images/fleet/Sedan/toyota-corolla/image2.jpg", alt: "Toyota Corolla - Frente" },
       { url: "/images/fleet/Sedan/toyota-corolla/image3.jpg", alt: "Toyota Corolla - Traseira" },
       { url: "/images/fleet/Sedan/toyota-corolla/image4.jpg", alt: "Toyota Corolla - Interior" }
+    ]
+  },
+  {
+    id: "hyundai-elantra-se-2020",
+    name: "Hyundai Elantra SE",
+    category: "Sedan",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Hyundai Elantra SE 2020 é o modelo de entrada da linha Elantra. Sedã de quatro portas com capacidade para cinco passageiros, equipado com motor 2.0L de 4 cilindros produzindo 147 cv e 132 lb-ft de torque. Consumo de combustível estimado de 13 km/l na cidade e 17 km/l na estrada.",
+    mainImage: "/images/fleet/Sedan/Hundai-Elantra-Cinza/image1.jpg",
+    images: [
+      { url: "/images/fleet/Sedan/Hundai-Elantra-Cinza/image2.jpg", alt: "Hyundai Elantra SE - Vista lateral" }
+    ]
+  },
+  {
+    id: "nissan-sentra-2025",
+    name: "Nissan Sentra",
+    category: "Sedan",
+    year: 2025,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Nissan Sentra 2025 é um sedã compacto de quatro portas com design atualizado. Motor 2.0L de quatro cilindros com 149 cv. Disponível em três níveis de acabamento: S, SV e SR. O modelo SV inclui NissanConnect e oferece três mudanças de óleo gratuitas durante os primeiros 24.000 km ou 24 meses.",
+    mainImage: "/images/fleet/Sedan/Nissan-Sentra/image1.jpg",
+    images: [
+      { url: "/images/fleet/Sedan/Nissan-Sentra/image2.jpg", alt: "Nissan Sentra - Vista frontal" },
+      { url: "/images/fleet/Sedan/Nissan-Sentra/image3.jpg", alt: "Nissan Sentra - Lateral moderna" },
+      { url: "/images/fleet/Sedan/Nissan-Sentra/image4.jpg", alt: "Nissan Sentra - Interior confortável" }
+    ]
+  },
+  {
+    id: "nissan-altima-2018",
+    name: "Nissan Altima",
+    category: "Sedan",
+    year: 2018,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Nissan Altima 2018 está disponível em cinco níveis de acabamento: 2.5 S, 2.5 SR, 2.5 SV, 2.5 SL e 3.5 SL. A maioria dos modelos está equipada com motor de quatro cilindros de 2.5L produzindo 179 cv. O modelo 3.5 SL tem um motor de 3.5L mais potente. Recursos de segurança padrão incluem travagem de emergência automática e aviso de colisão frontal.",
+    mainImage: "/images/fleet/Sedan/Nissan-Altima/image1.jpg",
+    images: [
+      { url: "/images/fleet/Sedan/Nissan-Altima/image2.jpg", alt: "Nissan Altima - Frente" },
+      { url: "/images/fleet/Sedan/Nissan-Altima/image3.jpg", alt: "Nissan Altima - Lateral" },
+      { url: "/images/fleet/Sedan/Nissan-Altima/image4.jpg", alt: "Nissan Altima - Interior" }
+    ]
+  },
+  {
+    id: "nissan-maxima-2018",
+    name: "Nissan Maxima",
+    category: "Sedan",
+    year: 2018,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Nissan Maxima de nona geração (2016-2023) apresenta design esportivo e tecnologia avançada. Equipado com motor V6 de 3.5L produzindo 300 cv, acoplado a transmissão Xtronic CVT. Disponível em cinco modelos: S, SV, SL, SR e Platinum. Modelos de 2017 em diante incluem Apple CarPlay como padrão.",
+    mainImage: "/images/fleet/Sedan/Nissan-Maxima/image1.jpg",
+    images: [
+      { url: "/images/fleet/Sedan/Nissan-Maxima/image2.jpg", alt: "Nissan Maxima - Vista frontal" },
+      { url: "/images/fleet/Sedan/Nissan-Maxima/image3.jpg", alt: "Nissan Maxima - Lateral esportiva" }
+    ]
+  },
+  {
+    id: "mitsubishi-mirage-g4-sedan-2020",
+    name: "Mitsubishi Mirage G4",
+    category: "Sedan",
+    year: 2020,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Mitsubishi Mirage G4 é um sedã subcompacto conhecido pela eficiência de combustível. Motor de três cilindros de 1.2L produzindo 78 cv, com classificação de 37 MPG combinada quando equipado com CVT automática. Modelo LE de 2020 inclui jantes de liga leve de 15 polegadas, entrada sem chave, botão de arranque, bancos dianteiros aquecidos e ecrã tátil de 6.5 polegadas com Apple CarPlay e Android Auto.",
+    mainImage: "/images/fleet/Sedan/Mitsubishi-Mirage-G4/image1.jpg",
+    images: [
+      { url: "/images/fleet/Sedan/Mitsubishi-Mirage-G4/image2.jpg", alt: "Mitsubishi Mirage G4 - Vista frontal" },
+      { url: "/images/fleet/Sedan/Mitsubishi-Mirage-G4/image3.jpg", alt: "Mitsubishi Mirage G4 - Lateral" },
+      { url: "/images/fleet/Sedan/Mitsubishi-Mirage-G4/image4.jpg", alt: "Mitsubishi Mirage G4 - Interior" }
     ]
   }
 ];
@@ -566,8 +643,87 @@ const carrinhas: Car[] = [
         alt: "Toyota Coaster - Interior espaçoso"
       }
     ]
+  },
+  {
+    id: "chevrolet-silverado-1500-high-country-2019",
+    name: "Chevrolet Silverado 1500 High Country",
+    category: "Carrinhas",
+    year: 2019,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "Chevrolet Silverado 1500 High Country 2019 é a versão de luxo do modelo Silverado 1500. Características incluem grade frontal cromada distintiva e detalhes exclusivos. Opções de motor incluem 5.3L EcoTec3 V8 com 355 cv e 383 lb-ft de torque, ou 6.2L EcoTec3 V8 com 420 cv e 460 lb-ft de torque. Transmissão automática de 8 ou 10 velocidades. Interior premium com acabamento em couro e costura exclusiva do pacote High Country. Recursos incluem câmera de visão surround, assistente de manutenção de faixa, alerta de colisão frontal e assentos aquecidos e ventilados.",
+    mainImage: "/images/fleet/Carrinhas/Chevrolet-Silverado-1500-High Country/image1.jpg",
+    images: [
+      { url: "/images/fleet/Carrinhas/Chevrolet-Silverado-1500-High Country/image2.jpg", alt: "Silverado High Country - Vista lateral luxuosa" },
+      { url: "/images/fleet/Carrinhas/Chevrolet-Silverado-1500-High Country/image3.jpg", alt: "Silverado High Country - Traseira" },
+      { url: "/images/fleet/Carrinhas/Chevrolet-Silverado-1500-High Country/image4.jpg", alt: "Silverado High Country - Interior premium" }
+    ]
+  },
+  {
+    id: "hyundai-staria-2024",
+    name: "Hyundai Staria",
+    category: "Carrinhas",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Diesel",
+    description:
+      "O Hyundai Staria é uma minivan ou MPV (Multi-Purpose Vehicle) com design futurista. Apresenta design minimalista com faixa de luzes diurnas de LED horizontais na frente e lanternas verticais de LED pixelizadas na traseira, reminiscentes de naves espaciais. Interior inspirado no salão de um navio de cruzeiro, com capacidade para até 9 passageiros. Versões topo de linha incluem poltronas reclináveis, aquecidas e ventiladas. Disponível com motor diesel 2.2 e motor a gasolina V6 3.5.",
+    mainImage: "/images/fleet/Carrinhas/Hyundai-Staria/image1.jpg",
+    images: [
+      { url: "/images/fleet/Carrinhas/Hyundai-Staria/image2.jpg", alt: "Hyundai Staria - Vista frontal futurista" },
+      { url: "/images/fleet/Carrinhas/Hyundai-Staria/image3.jpg", alt: "Hyundai Staria - Lateral espaçosa" },
+      { url: "/images/fleet/Carrinhas/Hyundai-Staria/image4.jpg", alt: "Hyundai Staria - Interior luxuoso" }
+    ]
+  },
+  {
+    id: "toyota-alphard-2023",
+    name: "Toyota Alphard",
+    category: "Carrinhas",
+    year: 2023,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Toyota Alphard é uma minivan de luxo conhecida por seu interior espaçoso e confortável. Design chamativo com grade dianteira proeminente e faróis marcantes. Interior projetado para oferecer máximo conforto com três fileiras de bancos ajustáveis que transformam o ambiente em sala de estar. Equipamentos incluem ar-condicionado digital, controle de tração opcional, câmeras de ré, portas laterais e porta-malas com acionamento elétrico. Modelos recentes incluem faróis e lanternas de LED sequenciais. Disponível com motores 2.4L (160 cv), 3.0L V6 (220 cv) ou versão híbrida 2.5L com excelente consumo de 17-18 km/l.",
+    mainImage: "/images/fleet/Carrinhas/Toyota-Alphard/image1.jpg",
+    images: [
+      { url: "/images/fleet/Carrinhas/Toyota-Alphard/image2.jpg", alt: "Toyota Alphard - Frente imponente" },
+      { url: "/images/fleet/Carrinhas/Toyota-Alphard/image3.jpg", alt: "Toyota Alphard - Lateral elegante" },
+      { url: "/images/fleet/Carrinhas/Toyota-Alphard/image4.jpg", alt: "Toyota Alphard - Interior de luxo" }
+    ]
+  },
+  {
+    id: "toyota-granvia-2022",
+    name: "Toyota Granvia",
+    category: "Carrinhas",
+    year: 2022,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Toyota Granvia é uma minivan de luxo produzida pela Toyota, conhecida por seu amplo espaço interno e conforto. Focado no transporte de passageiros em ambiente de alta qualidade. Design apresenta grande grade cromada e faróis de LED. Capacidade do interior oferece assentos confortáveis com configurações de seis ou sete lugares. Equipado com motor a gasolina V6 de 3.5 litros.",
+    mainImage: "/images/fleet/Carrinhas/Toyota-Granvia/image1.jpg",
+    images: [
+      { url: "/images/fleet/Carrinhas/Toyota-Granvia/image2.jpg", alt: "Toyota Granvia - Vista frontal premium" },
+      { url: "/images/fleet/Carrinhas/Toyota-Granvia/image3.jpg", alt: "Toyota Granvia - Lateral" },
+      { url: "/images/fleet/Carrinhas/Toyota-Granvia/image4.jpg", alt: "Toyota Granvia - Interior confortável" }
+    ]
+  },
+  {
+    id: "toyota-land-cruiser-70-2024",
+    name: "Toyota Land Cruiser Série 70",
+    category: "Carrinhas",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Diesel",
+    description:
+      "O Toyota Land Cruiser da série 70 é um veículo utilitário esportivo (SUV) conhecido por sua durabilidade e capacidade off-road excepcional. Design original da década de 1980 mantido e aprimorado. Versões recentes equipadas com motor 2.8L turbo-diesel de 4 cilindros (também usado na Toyota Hilux), ou motor V8 a diesel em modelos anteriores. Visual nostálgico com construção robusta focada na funcionalidade para condições extremas. Interior combina elementos modernos como tela sensível ao toque com controles simples e tradicionais. Transmissão automática de seis velocidades facilita condução em terrenos 4x4 e condições de overlanding.",
+    mainImage: "/images/fleet/Carrinhas/Toyota-Land-Cruiser/image1.jpg",
+    images: [
+      { url: "/images/fleet/Carrinhas/Toyota-Land-Cruiser/image2.jpg", alt: "Land Cruiser Série 70 - Frente robusta" },
+      { url: "/images/fleet/Carrinhas/Toyota-Land-Cruiser/image3.jpg", alt: "Land Cruiser Série 70 - Lateral off-road" },
+      { url: "/images/fleet/Carrinhas/Toyota-Land-Cruiser/image4.jpg", alt: "Land Cruiser Série 70 - Interior funcional" }
+    ]
   }
-  ,
 ];
 
 // ============================================
@@ -702,317 +858,147 @@ const muscles: Car[] = [
       { url: "/images/fleet/Muscle/Ford-Mustang-Vinho/image3.jpg", alt: "Ford Mustang Dark Horse - Lateral" },
       { url: "/images/fleet/Muscle/Ford-Mustang-Vinho/image4.jpg", alt: "Ford Mustang Dark Horse - Interior" }
     ]
+  },
+  {
+    id: "dodge-challenger-hellcat-red-2019",
+    name: "Dodge Challenger SRT Hellcat Widebody",
+    category: "Muscle",
+    year: 2019,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Dodge Challenger SRT Hellcat Widebody apresenta alargamentos de para-lamas (widebody) e motor V8 supercharged HEMI de 6.2L produzindo entre 717 e 808 cavalos de potência. Versões incluem Hellcat e Hellcat Redeye. Capô com entrada de ar dupla, rodas esportivas e design agressivo. Modelo de terceira geração produzido entre 2019 e 2023.",
+    mainImage: "/images/fleet/Muscle/Dogde-Challenger-Hellcat-Red/image1.jpg",
+    images: [
+      { url: "/images/fleet/Muscle/Dogde-Challenger-Hellcat-Red/image2.jpg", alt: "Dodge Challenger Hellcat Red - Vista frontal agressiva" },
+      { url: "/images/fleet/Muscle/Dogde-Challenger-Hellcat-Red/image3.jpg", alt: "Dodge Challenger Hellcat Red - Lateral widebody" },
+      { url: "/images/fleet/Muscle/Dogde-Challenger-Hellcat-Red/image4.jpg", alt: "Dodge Challenger Hellcat Red - Interior esportivo" }
+    ]
   }
 ];
 
 // ============================================
-// MAIS PROCURADOS - 20 carros
+// OUTROS - Carros diversos
 // ============================================
-const maisProc: Car[] = [
-  // SUV
+const outros: Car[] = [
   {
-    id: "dodge-durango-srt-featured",
-    name: "Dodge Durango SRT",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "SUV de alto desempenho com motor V8 sobrealimentado de até 710 cv. Combina potência e espaço familiar.",
-    mainImage: "/images/fleet/SUV/Dogde-Durango/image1.jpg",
-    featured: true,
-    images: [
-      { url: "/images/fleet/SUV/Dogde-Durango/image2.jpg", alt: "Dodge Durango - Vista frontal" },
-      { url: "/images/fleet/SUV/Dogde-Durango/image3.jpg", alt: "Dodge Durango - Lateral" },
-      { url: "/images/fleet/SUV/Dogde-Durango/image4.jpg", alt: "Dodge Durango - Interior" }
-    ]
-  },
-
-  // Sedan
-  {
-    id: "bmw-m3-competition-2025-featured",
-    name: "BMW M3 Competition",
-    category: "Mais procurados",
-    year: 2025,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Sedan esportivo de luxo com 510 cv e design agressivo. Interior premium e desempenho de 0 a 100 km/h em 3,9s.",
-    mainImage: "/images/fleet/Sedan/BMW/image1.jpg",
-    images: [
-      { url: "/images/fleet/Sedan/BMW/image2.jpg", alt: "BMW M3 Competition - Frente" },
-      { url: "/images/fleet/Sedan/BMW/image3.jpg", alt: "BMW M3 Competition - Lateral" },
-      { url: "/images/fleet/Sedan/BMW/image4.jpg", alt: "BMW M3 Competition - Interior esportivo" }
-    ]
-  },
-
-  // Muscle - Usando imagens reais do Dodge Challenger Hellcat
-  {
-    id: "chevrolet-corvette-c8-2024-featured",
-    name: "Chevrolet Corvette C8",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Supercar americano de motor central. Combina desempenho impressionante e design premium.",
-    mainImage: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image1.jpg",
-    images: [
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image2.jpg", alt: "Chevrolet Corvette C8 - Vista frontal" },
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image3.jpg", alt: "Chevrolet Corvette C8 - Lateral" },
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image4.jpg", alt: "Chevrolet Corvette C8 - Interior esportivo" }
-    ]
-  },
-
-  // Carrinha - Usando imagens reais da Silverado
-  {
-    id: "ford-transit-2024-featured",
-    name: "Ford Transit",
-    category: "Mais procurados",
-    year: 2024,
+    id: "chevrolet-spark-orange-2020",
+    name: "Chevrolet Spark Laranja",
+    category: "Outros",
+    year: 2020,
     transmission: "Manual",
-    fuel: "Diesel",
-    description: "Van comercial versátil e confiável, ideal para transporte de carga ou passageiros. Espaço e robustez garantidos.",
-    mainImage: "/images/fleet/Carrinhas/Chervolet-Silverado/image1.jpg",
-    images: [
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image2.jpg", alt: "Ford Transit - Vista frontal" },
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image3.jpg", alt: "Ford Transit - Lateral" },
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image4.jpg", alt: "Ford Transit - Interior funcional" }
-    ]
-  },
-
-  // SUV
-  {
-    id: "kia-sportage-2024-white-featured",
-    name: "Kia Sportage Branco",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
     fuel: "Gasolina",
-    description: "SUV moderno com motor 1.6 turbo de 180 cv e sistema híbrido leve. Design futurista e interior tecnológico.",
-    mainImage: "/images/fleet/SUV/Kia-Sportage-2024-white/image1.jpg",
+    description:
+      "O Chevrolet Spark é um carro subcompacto ideal para a vida na cidade. Equipado com motor 1.4L de 4 cilindros produzindo 98 cv. Inclui câmera de ré, Apple CarPlay e Android Auto. Design compacto e fácil de estacionar, perfeito para uso urbano diário.",
+    mainImage: "/images/fleet/Outros/Chevrolet-Spark-Orange/image1.jpg",
     images: [
-      { url: "/images/fleet/SUV/Kia-Sportage-2024-white/image2.jpg", alt: "Kia Sportage Branco - Frente" },
-      { url: "/images/fleet/SUV/Kia-Sportage-2024-white/image3.jpg", alt: "Kia Sportage Branco - Lateral" },
-      { url: "/images/fleet/SUV/Kia-Sportage-2024-white/image4.jpg", alt: "Kia Sportage Branco - Interior" }
+      { url: "/images/fleet/Outros/Chevrolet-Spark-Orange/image2.jpg", alt: "Chevrolet Spark Laranja - Vista frontal" },
+      { url: "/images/fleet/Outros/Chevrolet-Spark-Orange/image3.jpg", alt: "Chevrolet Spark Laranja - Lateral compacta" }
     ]
   },
-
-  // Sedan - Usando imagens reais do Toyota Corolla
   {
-    id: "toyota-corolla-2024-featured",
-    name: "Toyota Corolla",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Híbrido",
-    description: "O sedan mais vendido do mundo. Confiabilidade, conforto e eficiência híbrida garantidas.",
-    mainImage: "/images/fleet/Sedan/toyota-corolla/image1.jpg",
-    images: [
-      { url: "/images/fleet/Sedan/toyota-corolla/image2.jpg", alt: "Toyota Corolla - Vista frontal" },
-      { url: "/images/fleet/Sedan/toyota-corolla/image3.jpg", alt: "Toyota Corolla - Lateral" },
-      { url: "/images/fleet/Sedan/toyota-corolla/image4.jpg", alt: "Toyota Corolla - Interior confortável" }
-    ]
-  },
-
-  // SUV
-  {
-    id: "nissan-patrol-nismo-featured",
-    name: "Nissan Patrol Nismo",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Versão esportiva do Patrol, com motor V8 5.6L de 428 cv, suspensão Bilstein e detalhes exclusivos NISMO.",
-    mainImage: "/images/fleet/SUV/Nissan-Patrol-WhiteKit/image1.jpg",
-    images: [
-      { url: "/images/fleet/SUV/Nissan-Patrol-WhiteKit/image2.jpg", alt: "Nissan Patrol Nismo - Frente" },
-      { url: "/images/fleet/SUV/Nissan-Patrol-WhiteKit/image3.jpg", alt: "Nissan Patrol Nismo - Lateral" },
-      { url: "/images/fleet/SUV/Nissan-Patrol-WhiteKit/image4.jpg", alt: "Nissan Patrol Nismo - Interior" }
-    ]
-  },
-
-  // Muscle - Usando imagens reais do Ford Mustang White
-  {
-    id: "ford-mustang-shelby-gt500-2020-featured",
-    name: "Ford Mustang Shelby GT500",
-    category: "Mais procurados",
-    year: 2020,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "O Mustang mais potente já feito, com motor V8 Supercharged de 760 cv e desempenho brutal.",
-    mainImage: "/images/fleet/Muscle/Ford-Mustang-White/image1.jpg",
-    images: [
-      { url: "/images/fleet/Muscle/Ford-Mustang-White/image2.jpg", alt: "Mustang Shelby GT500 - Frente" },
-      { url: "/images/fleet/Muscle/Ford-Mustang-White/image3.jpg", alt: "Mustang Shelby GT500 - Lateral" },
-      { url: "/images/fleet/Muscle/Ford-Mustang-White/image4.jpg", alt: "Mustang Shelby GT500 - Interior esportivo" }
-    ]
-  },
-
-  // Sedan - Usando imagens reais do Mercedes Classe E
-  {
-    id: "mercedes-class-e-2021-featured",
-    name: "Mercedes-Benz Classe E AMG Line",
-    category: "Mais procurados",
-    year: 2021,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Sedan executivo com sistema MBUX e design AMG Line. Combina luxo, desempenho e tecnologia avançada.",
-    mainImage: "/images/fleet/Sedan/Mercedes-Benz-Class-E/image1.jpg",
-    images: [
-      { url: "/images/fleet/Sedan/Mercedes-Benz-Class-E/image2.jpg", alt: "Mercedes Classe E - Frente" },
-      { url: "/images/fleet/Sedan/Mercedes-Benz-Class-E/image3.jpg", alt: "Mercedes Classe E - Lateral" },
-      { url: "/images/fleet/Sedan/Mercedes-Benz-Class-E/image4.jpg", alt: "Mercedes Classe E - Interior" }
-    ]
-  },
-
-  // SUV
-  {
-    id: "toyota-bz4x-featured",
-    name: "Toyota bZ4X",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Elétrico",
-    description: "SUV elétrico da Toyota com até 450 km de autonomia. Tecnologia avançada e design futurista.",
-    mainImage: "/images/fleet/SUV/Toyota-bZ4X/image1.jpg",
-    images: [
-      { url: "/images/fleet/SUV/Toyota-bZ4X/image2.jpg", alt: "Toyota bZ4X - Frente" },
-      { url: "/images/fleet/SUV/Toyota-bZ4X/image3.jpg", alt: "Toyota bZ4X - Lateral" },
-      { url: "/images/fleet/SUV/Toyota-bZ4X/image4.jpg", alt: "Toyota bZ4X - Interior" }
-    ]
-  },
-
-  // Muscle - Usando imagens reais do Dodge Challenger Hellcat
-  {
-    id: "dodge-challenger-hellcat-2023-featured",
-    name: "Dodge Challenger SRT Hellcat",
-    category: "Mais procurados",
-    year: 2023,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "Muscle car lendário com motor HEMI V8 de até 797 cv. Potência e design clássico americano.",
-    mainImage: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image1.jpg",
-    images: [
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image2.jpg", alt: "Dodge Challenger Hellcat - Frente" },
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image3.jpg", alt: "Dodge Challenger Hellcat - Lateral" },
-      { url: "/images/fleet/Muscle/Dodge-Challenger-Hellcat/image4.jpg", alt: "Dodge Challenger Hellcat - Interior" }
-    ]
-  },
-
-  // Carrinha - Usando imagens reais da Silverado
-  {
-    id: "chevrolet-silverado-1500-2020-featured",
-    name: "Chevrolet Silverado 1500",
-    category: "Mais procurados",
-    year: 2020,
-    transmission: "Automática",
-    fuel: "Diesel",
-    description: "Pickup robusta com motor V8 ou turbo-diesel. Capacidade de reboque de até 6.033 kg e conforto de sobra.",
-    mainImage: "/images/fleet/Carrinhas/Chervolet-Silverado/image1.jpg",
-    images: [
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image2.jpg", alt: "Chevrolet Silverado 1500 - Frente" },
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image3.jpg", alt: "Chevrolet Silverado 1500 - Lateral" },
-      { url: "/images/fleet/Carrinhas/Chervolet-Silverado/image4.jpg", alt: "Chevrolet Silverado 1500 - Traseira" }
-    ]
-  },
-
-  // Sedan - Usando imagens reais do Kia Optima
-  {
-    id: "kia-optima-2019-featured",
-    name: "Kia Optima",
-    category: "Mais procurados",
+    id: "chevrolet-spark-red-2019",
+    name: "Chevrolet Spark Vermelho",
+    category: "Outros",
     year: 2019,
     transmission: "Automática",
     fuel: "Gasolina",
-    description: "Sedan moderno e acessível, com Apple CarPlay, Android Auto e ótimo conforto.",
-    mainImage: "/images/fleet/Sedan/kia-optima/image1.jpg",
+    description:
+      "Chevrolet Spark 2019 conhecido por sua fiabilidade e estilo. Hatchback subcompacto com motor 1.4L produzindo 98 cv. Versões incluem transmissão CVT automática. Design vibrante e recursos modernos como Apple CarPlay e Android Auto.",
+    mainImage: "/images/fleet/Outros/Chevrolet-Spark-Red/image1.jpg",
     images: [
-      { url: "/images/fleet/Sedan/kia-optima/image2.jpg", alt: "Kia Optima - Frente" },
-      { url: "/images/fleet/Sedan/kia-optima/image3.jpg", alt: "Kia Optima - Lateral" },
-      { url: "/images/fleet/Sedan/kia-optima/image4.jpg", alt: "Kia Optima - Interior" }
+      { url: "/images/fleet/Outros/Chevrolet-Spark-Red/image2.jpg", alt: "Chevrolet Spark Vermelho - Frente" },
+      { url: "/images/fleet/Outros/Chevrolet-Spark-Red/image3.jpg", alt: "Chevrolet Spark Vermelho - Lateral" },
+      { url: "/images/fleet/Outros/Chevrolet-Spark-Red/image4.jpg", alt: "Chevrolet Spark Vermelho - Interior" }
     ]
   },
-
-  // SUV
   {
-    id: "gmc-acadia-at4-2024-featured",
-    name: "GMC Acadia AT4",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "SUV com design robusto e motor turbo 2.5L de 328 cv. Focado em desempenho off-road com tração integral.",
-    mainImage: "/images/fleet/SUV/GMC-Acadia-AT4/image1.jpg",
-    images: [
-      { url: "/images/fleet/SUV/GMC-Acadia-AT4/image2.jpg", alt: "GMC Acadia AT4 - Vista frontal" },
-      { url: "/images/fleet/SUV/GMC-Acadia-AT4/image3.jpg", alt: "GMC Acadia AT4 - Lateral" },
-      { url: "/images/fleet/SUV/GMC-Acadia-AT4/image4.jpg", alt: "GMC Acadia AT4 - Interior" }
-    ]
-  },
-
-  // Muscle - Usando imagens reais do Ford Mustang Vinho
-  {
-    id: "ford-mustang-dark-horse-2024-featured",
-    name: "Ford Mustang Dark Horse",
-    category: "Mais procurados",
-    year: 2024,
-    transmission: "Manual",
-    fuel: "Gasolina",
-    description: "O novo Mustang Dark Horse combina tradição e força com motor V8 5.0L e design moderno.",
-    mainImage: "/images/fleet/Muscle/Ford-Mustang-Vinho/image1.jpg",
-    images: [
-      { url: "/images/fleet/Muscle/Ford-Mustang-Vinho/image2.jpg", alt: "Ford Mustang Dark Horse - Frente" },
-      { url: "/images/fleet/Muscle/Ford-Mustang-Vinho/image3.jpg", alt: "Ford Mustang Dark Horse - Lateral" },
-      { url: "/images/fleet/Muscle/Ford-Mustang-Vinho/image4.jpg", alt: "Ford Mustang Dark Horse - Interior" }
-    ]
-  },
-
-  // SUV
-  {
-    id: "kia-telluride-2020-featured",
-    name: "Kia Telluride",
-    category: "Mais procurados",
+    id: "chevrolet-spark-white-2020",
+    name: "Chevrolet Spark Branco",
+    category: "Outros",
     year: 2020,
-    transmission: "Automática",
-    fuel: "Gasolina",
-    description: "SUV de três fileiras com motor V6 3.8L e interior premium. Ideal para famílias grandes com estilo.",
-    mainImage: "/images/fleet/SUV/Kia-Telluride-2020/image1.jpg",
-    images: [
-      { url: "/images/fleet/SUV/Kia-Telluride-2020/image2.jpg", alt: "Kia Telluride - Frente" },
-      { url: "/images/fleet/SUV/Kia-Telluride-2020/image3.jpg", alt: "Kia Telluride - Lateral" },
-      { url: "/images/fleet/SUV/Kia-Telluride-2020/image4.jpg", alt: "Kia Telluride - Interior" }
-    ]
-  },
-
-  // Carrinha - Usando imagens reais do Toyota Coaster
-  {
-    id: "toyota-coaster-2025-featured",
-    name: "Toyota Coaster",
-    category: "Mais procurados",
-    year: 2025,
     transmission: "Manual",
-    fuel: "Diesel",
-    description: "Micro-ônibus robusto com capacidade para 30 passageiros. Ideal para viagens longas e transporte urbano.",
-    mainImage: "/images/fleet/Carrinhas/Coaster/image1.jpg",
+    fuel: "Gasolina",
+    description:
+      "Chevrolet Spark na cor branca, compacto e econômico. Motor 1.4L de 98 cv com excelente eficiência de combustível. Perfeito para estacionamento fácil e mobilidade urbana. Equipado com recursos de segurança e conectividade modernos.",
+    mainImage: "/images/fleet/Outros/Chevrolet-Spark-White/image1.jpg",
     images: [
-      { url: "/images/fleet/Carrinhas/Coaster/image2.jpg", alt: "Toyota Coaster - Frente" },
-      { url: "/images/fleet/Carrinhas/Coaster/image3.jpg", alt: "Toyota Coaster - Lateral" },
-      { url: "/images/fleet/Carrinhas/Coaster/image4.jpg", alt: "Toyota Coaster - Interior espaçoso" }
+      { url: "/images/fleet/Outros/Chevrolet-Spark-White/image2.jpg", alt: "Chevrolet Spark Branco - Vista frontal" },
+      { url: "/images/fleet/Outros/Chevrolet-Spark-White/image3.jpg", alt: "Chevrolet Spark Branco - Lateral" }
     ]
   },
-
-  // Sedan - Usando imagens reais do Genesis G70
   {
-    id: "genesis-g70-2026-featured",
-    name: "Genesis G70",
-    category: "Mais procurados",
-    year: 2026,
+    id: "mercedes-a45-amg-2016",
+    name: "Mercedes-Benz A45 AMG",
+    category: "Outros",
+    year: 2016,
     transmission: "Automática",
     fuel: "Gasolina",
-    description: "Sedan esportivo de luxo com motor V6 biturbo de 365 cv. Mistura elegância, conforto e desempenho.",
-    mainImage: "/images/fleet/Sedan/Genesis-G70/image1.jpg",
+    description:
+      "O Mercedes-Benz A45 AMG (W176) é um hatchback esportivo de alto desempenho. Motor 2.0L turbo de quatro cilindros produzindo entre 376 cv e 421 cv, um dos mais potentes do mundo. Acelera de 0 a 100 km/h em 3,9 segundos, com velocidade máxima de 270 km/h. Tração integral 4MATIC e transmissão automática de 7 velocidades.",
+    mainImage: "/images/fleet/Outros/Mercedes-Benz-A45-AMG/image1.jpg",
     images: [
-      { url: "/images/fleet/Sedan/Genesis-G70/image2.jpg", alt: "Genesis G70 - Vista frontal" },
-      { url: "/images/fleet/Sedan/Genesis-G70/image3.jpg", alt: "Genesis G70 - Lateral" },
-      { url: "/images/fleet/Sedan/Genesis-G70/image4.jpg", alt: "Genesis G70 - Interior refinado" }
+      { url: "/images/fleet/Outros/Mercedes-Benz-A45-AMG/image2.jpg", alt: "Mercedes A45 AMG - Frente agressiva" },
+      { url: "/images/fleet/Outros/Mercedes-Benz-A45-AMG/image3.jpg", alt: "Mercedes A45 AMG - Lateral esportiva" }
+    ]
+  },
+  {
+    id: "mini-cooper-countryman-2014",
+    name: "MINI Cooper Countryman",
+    category: "Outros",
+    year: 2014,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O MINI Cooper Countryman (R60) é um SUV compacto com design icônico da MINI. Oferece mais espaço que o hatchback padrão, com direção nítida e manuseio impressionante. Mantém a sensação característica de dirigir um MINI com conforto adicional.",
+    mainImage: "/images/fleet/Outros/MINI-Cooper-Countryman/image1.jpg",
+    images: [
+      { url: "/images/fleet/Outros/MINI-Cooper-Countryman/image2.jpg", alt: "MINI Countryman - Vista frontal" },
+      { url: "/images/fleet/Outros/MINI-Cooper-Countryman/image3.jpg", alt: "MINI Countryman - Lateral distintiva" }
+    ]
+  },
+  {
+    id: "mitsubishi-mirage-g4-2024",
+    name: "Mitsubishi Mirage G4",
+    category: "Outros",
+    year: 2024,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Mitsubishi Mirage G4 é um sedã subcompacto acessível com motor 1.2L de 3 cilindros produzindo 78 cv. Oferece economia de combustível de 17,4 km/l na estrada. Equipado com Apple CarPlay, Android Auto e tela de 7 polegadas. Garantia de 10 anos ou 160.000 km.",
+    mainImage: "/images/fleet/Outros/Mitsubishi-Mirage-G4/image1.jpg",
+    images: [
+      { url: "/images/fleet/Outros/Mitsubishi-Mirage-G4/image2.jpg", alt: "Mitsubishi Mirage G4 - Frente econômica" }
+    ]
+  },
+  {
+    id: "nissan-versa-note-2017",
+    name: "Nissan Versa Note",
+    category: "Outros",
+    year: 2017,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Nissan Versa Note 2017 é um hatchback compacto eficiente. Motor 1.6L de 4 cilindros com 109 cv. Conhecido por interior espaçoso e bom consumo de combustível. Versões incluem S, S Plus, SV, SR e SL com diversos recursos de conforto.",
+    mainImage: "/images/fleet/Outros/Nissan-Versa-Note/image1.jpg",
+    images: [
+      { url: "/images/fleet/Outros/Nissan-Versa-Note/image2.jpg", alt: "Nissan Versa Note - Vista frontal" },
+      { url: "/images/fleet/Outros/Nissan-Versa-Note/image3.jpg", alt: "Nissan Versa Note - Lateral" }
+    ]
+  },
+  {
+    id: "rolls-royce-ghost-2012",
+    name: "Rolls-Royce Ghost",
+    category: "Outros",
+    year: 2012,
+    transmission: "Automática",
+    fuel: "Gasolina",
+    description:
+      "O Rolls-Royce Ghost é o ápice do luxo automotivo. Motor V12 6.6L biturbo produzindo 563 cv. Acelera de 0 a 100 km/h em 4,9 segundos. Suspensão a ar adaptativa, bancos de couro com costura artesanal, portas de fechamento suave e guarda-chuva embutido. Peso de 2.470 kg e 5,4 metros de comprimento.",
+    mainImage: "/images/fleet/Outros/Rolls-Royce-Ghost/image1.jpg",
+    images: [
+      { url: "/images/fleet/Outros/Rolls-Royce-Ghost/image2.jpg", alt: "Rolls-Royce Ghost - Frente majestosa" },
+      { url: "/images/fleet/Outros/Rolls-Royce-Ghost/image4.jpg", alt: "Rolls-Royce Ghost - Lateral elegante" }
     ]
   }
 ];
@@ -1026,7 +1012,7 @@ export const cars: Car[] = [
   ...suvs,
   ...sedans,
   ...carrinhas,
-  ...maisProc,
+  ...outros,
 ];
 
 // ⭐ Apenas carros em destaque (usado na home - apenas 4-6 carros)
