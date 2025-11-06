@@ -3,13 +3,13 @@ import SectionHeading from "./SectionHeading";
 
 // Imagens da pasta CEO
 const ceoImages = [
-  "/images/fleet/CEO/image1.png",
+  "/images/fleet/CEO/image1.webp",
   "/images/fleet/CEO/image2.webp",
   "/images/fleet/CEO/image3.webp",
-  "/images/fleet/CEO/image4.jpg",
-  "/images/fleet/CEO/image5.jpg",
-  "/images/fleet/CEO/image6.jpg",
-  "/images/fleet/CEO/image7.jpg",
+  "/images/fleet/CEO/image4.webp",
+  "/images/fleet/CEO/image5.webp",
+  "/images/fleet/CEO/image6.webp",
+  "/images/fleet/CEO/image7.webp",
 ];
 
 const FounderSection = () => {

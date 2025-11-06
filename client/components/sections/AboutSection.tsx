@@ -25,12 +25,12 @@ const pillars = [
 
 // Imagens da pasta Dubai
 const dubaiImages = [
-  "/images/fleet/Dubai/image1.jpeg",
-  "/images/fleet/Dubai/image2.jpg",
-  "/images/fleet/Dubai/image3.jpeg",
+  "/images/fleet/Dubai/image1.webp",
+  "/images/fleet/Dubai/image2.webp",
+  "/images/fleet/Dubai/image3.webp",
   "/images/fleet/Dubai/image4.webp",
-  "/images/fleet/Dubai/image5.jpg",
-  "/images/fleet/Dubai/image6.jpg",
+  "/images/fleet/Dubai/image5.webp",
+  "/images/fleet/Dubai/image6.webp",
 ];
 
 const AboutSection = () => {
