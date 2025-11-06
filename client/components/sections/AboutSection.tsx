@@ -43,7 +43,7 @@ const AboutSection = () => {
     }, 3000); // Troca a cada 3 segundos
 
     return () => clearInterval(interval);
-  }, []);
+  }, [dubaiImages.length]);
   return (
     <section id="sobre" className="py-24 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 md:grid-cols-[1.05fr,0.95fr] md:px-8 md:items-center">
