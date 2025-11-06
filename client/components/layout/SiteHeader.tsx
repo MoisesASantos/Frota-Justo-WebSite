@@ -126,7 +126,7 @@ const SiteHeader = () => {
               key={item.target}
               href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
               onClick={(event) => handleNavClick(event, item.target)}
-              className="relative text-foreground/80 transition-colors hover:text-foreground"
+              className="relative text-foreground/80 transition-colors hover:text-primary"
             >
               {item.label}
             </a>
@@ -163,7 +163,7 @@ const SiteHeader = () => {
                 key={item.target}
                 href={`${item.target === "frota" ? "/frota" : `/#${item.target}`}`}
                 onClick={(event) => handleNavClick(event, item.target)}
-                className="rounded-lg px-2 py-1.5 text-foreground/85 transition-colors hover:bg-primary/10 hover:text-foreground"
+                className="rounded-lg px-2 py-1.5 text-foreground/85 transition-colors hover:bg-primary/10 hover:text-primary"
               >
                 {item.label}
               </a>

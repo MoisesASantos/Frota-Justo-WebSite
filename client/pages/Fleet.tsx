@@ -253,7 +253,7 @@ const Fleet = () => {
           <div className="mt-8 text-center">
             <Button
               size="lg"
-              className="rounded-full px-8 shadow-lg shadow-primary/20"
+              className="rounded-full px-8 shadow-lg shadow-primary/20 animate-neon-glow hover:animate-none"
               onClick={() => {
                 navigate("/");
                 setTimeout(() => {
