@@ -40,7 +40,7 @@ const FleetSection = () => {
         />
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-          {vehicles.map((vehicle) => (
+          {vehicles.map((vehicle, index) => (
             <article
               key={vehicle.name}
               className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-card shadow-lg transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-2"
@@ -50,7 +50,9 @@ const FleetSection = () => {
                   src={vehicle.image}
                   alt={vehicle.name}
                   className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" />
               </div>

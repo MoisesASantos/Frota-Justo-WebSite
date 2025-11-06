@@ -145,7 +145,7 @@ const Fleet = () => {
           {/* Cars Grid */}
           {filteredCars.length > 0 ? (
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-              {filteredCars.map((car) => (
+              {filteredCars.map((car, index) => (
                 <article
                   key={car.id}
                   className="group flex h-full flex-col overflow-hidden rounded-xl border border-primary/10 bg-card shadow-md transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:-translate-y-1"
@@ -159,7 +159,9 @@ const Fleet = () => {
                       src={car.mainImage}
                       alt={car.name}
                       className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
+                      loading={index < 10 ? "eager" : "lazy"}
+                      decoding="async"
+                      fetchPriority={index < 5 ? "high" : "auto"}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />
                   </div>
