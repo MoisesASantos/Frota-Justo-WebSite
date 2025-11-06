@@ -8,22 +8,22 @@ const vehicles = [
   {
     name: "Dodge Challenger",
     category: "Muscle Car",
-    image: "/images/fleet/Muscle/Dodge-Challenger-Hellcat-Green/image1.jpg",
+    image: "/images/fleet/Muscle/Dodge-Challenger-Hellcat-Green/image1.webp",
   },
   {
     name: "Genesis G70",
     category: "Sedan executivo",
-    image: "/images/fleet/Sedan/Genesis-G70/image2.jpg",
+    image: "/images/fleet/Sedan/Genesis-G70/image2.webp",
   },
   {
     name: "Mercedes-Benz AMG G63",
     category: "SUV Exclusivo",
-    image: "/images/fleet/SUV/Mercedes-G63-White/image2.jpg",
+    image: "/images/fleet/SUV/Mercedes-G63-White/image2.webp",
   },
   {
     name: "Chevrolet Silverado 1500",
     category: "Carrinhas",
-    image: "/images/fleet/Carrinhas/Chervolet-Silverado/image4.jpg",
+    image: "/images/fleet/Carrinhas/Chervolet-Silverado/image4.webp",
   },
 ];
 
