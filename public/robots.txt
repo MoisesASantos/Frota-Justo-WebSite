@@ -1,16 +1,57 @@
+# Frota Justo - Site Oficial
+# www.frotajusto.com
+
+# Regras para todos os bots
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /private/
+
+# Googlebot - Prioridade máxima
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
+# Googlebot para imagens
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+
+# Bingbot
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 0
 
+# Bots de redes sociais - permitir tudo para preview
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
 
-Sitemap: https://frotajusto.me/sitemap.xml
+User-agent: Slackbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Outros bots populares
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.frotajusto.com/sitemap.xml
+
+# Host preferido
+Host: www.frotajusto.com
