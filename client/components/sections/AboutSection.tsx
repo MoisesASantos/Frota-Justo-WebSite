@@ -1,4 +1,5 @@
 import { BadgeCheck, Gem, Handshake } from "lucide-react";
+import { useState, useEffect } from "react";
 import SectionHeading from "./SectionHeading";
 
 const pillars = [
@@ -22,7 +23,27 @@ const pillars = [
   },
 ];
 
+// Imagens da pasta Dubai
+const dubaiImages = [
+  "/images/fleet/Dubai/image1.jpeg",
+  "/images/fleet/Dubai/image2.jpg",
+  "/images/fleet/Dubai/image3.jpg",
+  "/images/fleet/Dubai/image4.webp",
+  "/images/fleet/Dubai/image5.webp",
+  "/images/fleet/Dubai/image6.jpg",
+];
+
 const AboutSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Carrossel automático de imagens
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % dubaiImages.length);
+    }, 3000); // Troca a cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section id="sobre" className="py-24 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 md:grid-cols-[1.05fr,0.95fr] md:px-8 md:items-center">
@@ -58,12 +79,17 @@ const AboutSection = () => {
           <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-3xl bg-primary/20 blur-3xl sm:block" />
           <div className="absolute -bottom-8 -right-8 hidden h-28 w-28 rounded-full bg-accent/30 blur-3xl sm:block" />
           <div className="relative h-[700px] overflow-hidden rounded-3xl shadow-2xl shadow-primary/10">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F890768a30e46456fba742a0c4c8131c7"
-              alt="Consultor da Frota Justo apresentando veículo premium"
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
+            {dubaiImages.map((imageUrl, index) => (
+              <img
+                key={index}
+                src={imageUrl}
+                alt={`Frota Justo em Dubai ${index + 1}`}
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+                loading="lazy"
+              />
+            ))}
           </div>
         </div>
       </div>

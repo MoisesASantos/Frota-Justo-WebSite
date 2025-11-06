@@ -4,17 +4,36 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FleetDetailsModal from "@/components/sections/FleetDetailsModal";
 import SectionHeading from "@/components/sections/SectionHeading";
-import { cars, categories, type Car } from "@/data/fleetData";
+import { cars, categories, type Car, type CarImage } from "@/data/fleetData";
 
 const Fleet = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Selecionar apenas Muscle e SUVs Mercedes para o background
+  const heroImages = cars
+    .filter(car => 
+      car.category === "Muscle" || 
+      (car.category === "SUV" && car.name.toLowerCase().includes("mercedes"))
+    )
+    .map(car => car.mainImage)
+    .slice(0, 15); // Limitar a 15 imagens
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Carrossel automático de imagens
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 3000); // Troca a cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const filteredCars =
     selectedCategory === null
@@ -32,13 +51,9 @@ const Fleet = () => {
     setTimeout(() => {
       const element = document.getElementById("contactos");
       if (element) {
-        const headerOffset = 100;
-        const elementPosition =
-          element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
+        element.scrollIntoView({
           behavior: "smooth",
+          block: "start",
         });
       }
     }, 100);
@@ -47,8 +62,28 @@ const Fleet = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 to-primary/5 pt-32 pb-8 md:pt-40 md:pb-12">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 pt-32 pb-8 md:pt-40 md:pb-12">
+        {/* Background Images Carousel */}
+        <div className="absolute inset-0 z-0">
+          {heroImages.map((imageUrl, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImageIndex ? "opacity-50" : "opacity-0"
+              }`}
+            >
+              <img
+                src={imageUrl}
+                alt={`Frota ${index + 1}`}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ))}
+          {/* Overlay gradient azul claro */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-blue-100/70 to-blue-50/80" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading
             eyebrow="Frota Completa"
             title="Explore nossa seleção de veículos premium"
@@ -197,7 +232,7 @@ const Fleet = () => {
                 Email
               </h3>
               <a
-                href="mailto:contacto@frotajusto.com"
+                href="mailto:frotajustolda@hotmail.com"
                 className="mt-2 block text-sm text-foreground/70 hover:text-foreground"
               >
                 frotajustolda@hotmail.com
@@ -219,7 +254,18 @@ const Fleet = () => {
             <Button
               size="lg"
               className="rounded-full px-8 shadow-lg shadow-primary/20"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("contactos");
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }, 100);
+              }}
             >
               Enviar mensagem
             </Button>
