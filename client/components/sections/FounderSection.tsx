@@ -1,6 +1,28 @@
+import { useState, useEffect } from "react";
 import SectionHeading from "./SectionHeading";
 
+// Imagens da pasta CEO
+const ceoImages = [
+  "/images/fleet/CEO/image1.png",
+  "/images/fleet/CEO/image2.webp",
+  "/images/fleet/CEO/image3.webp",
+  "/images/fleet/CEO/image4.jpg",
+  "/images/fleet/CEO/image5.jpg",
+  "/images/fleet/CEO/image6.jpg",
+  "/images/fleet/CEO/image7.jpg",
+];
+
 const FounderSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Carrossel automático de imagens
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % ceoImages.length);
+    }, 3000); // Troca a cada 3 segundos
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section
       id="fundador"
@@ -54,12 +76,19 @@ const FounderSection = () => {
           </div>
           <div className="flex flex-col gap-6">
             <div className="relative overflow-hidden rounded-[2.25rem] border border-primary/20 shadow-2xl shadow-primary/10">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F2d1ab92b00a64a1cb521942d45c01811%2F5dfc7ed3bc2e4215a92a048d42fce9d7?format=webp&width=800"
-                alt="António Lissimo Laurindo 'Justo', CEO e Fundador"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
+              {ceoImages.map((imageUrl, index) => (
+                <img
+                  key={index}
+                  src={imageUrl}
+                  alt={`António Lissimo Laurindo 'Justo' ${index + 1}`}
+                  className={`h-full w-full transition-opacity duration-1000 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  } ${index === 0 ? "" : "absolute inset-0"} ${
+                    index === 3 || index === 4 ? "object-contain" : "object-cover"
+                  }`}
+                  loading="lazy"
+                />
+              ))}
             </div>
             <aside className="relative overflow-hidden rounded-[2.25rem] border border-primary/20 bg-white/70 p-6 shadow-2xl shadow-primary/10 backdrop-blur">
               <div className="absolute -right-10 -top-12 h-32 w-32 rounded-full bg-primary/20 blur-3xl" />
