@@ -83,10 +83,29 @@ export default {
             height: "0",
           },
         },
+        "neon-glow": {
+          "0%, 100%": {
+            transform: "translateX(0)",
+            filter: "brightness(1.2) drop-shadow(0 0 8px hsl(var(--primary))) drop-shadow(0 0 16px hsl(var(--primary)/0.5))",
+          },
+          "25%": {
+            transform: "translateX(-2px)",
+            filter: "brightness(1.25) drop-shadow(0 0 10px hsl(var(--primary))) drop-shadow(0 0 18px hsl(var(--primary)/0.6))",
+          },
+          "50%": {
+            transform: "translateX(2px)",
+            filter: "brightness(1.2) drop-shadow(0 0 8px hsl(var(--primary))) drop-shadow(0 0 16px hsl(var(--primary)/0.5))",
+          },
+          "75%": {
+            transform: "translateX(-1px)",
+            filter: "brightness(1.25) drop-shadow(0 0 10px hsl(var(--primary))) drop-shadow(0 0 18px hsl(var(--primary)/0.6))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "neon-glow": "neon-glow 3s ease-in-out infinite",
       },
     },
   },
