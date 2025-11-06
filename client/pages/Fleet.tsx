@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,12 +6,25 @@ import FleetDetailsModal from "@/components/sections/FleetDetailsModal";
 import SectionHeading from "@/components/sections/SectionHeading";
 import { cars, categories, type Car, type CarImage } from "@/data/fleetData";
 
+// Função para embaralhar array (Fisher-Yates shuffle)
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const Fleet = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Embaralhar carros uma única vez quando o componente monta
+  const randomizedCars = useMemo(() => shuffleArray(cars), []);
 
   // Selecionar apenas Muscle e SUVs Mercedes para o background
   const heroImages = cars
@@ -37,8 +50,8 @@ const Fleet = () => {
 
   const filteredCars =
     selectedCategory === null
-      ? cars
-      : cars.filter((car) => car.category === selectedCategory);
+      ? randomizedCars
+      : randomizedCars.filter((car) => car.category === selectedCategory);
 
   const handleCarClick = (car: Car) => {
     setSelectedCar(car);
