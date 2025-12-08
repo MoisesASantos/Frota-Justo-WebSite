@@ -155,8 +155,7 @@ const SiteFooter = () => {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-4 text-primary" />
               <span>
-                Jardins de Talatona — Rua do Mundo Verde, Condomínio Jardins de
-                Talatona, Edifício A, APT 404, Talatona, Luanda, Luanda Province
+                Avenida Fidel de Castro, Via Expressa – Urbanização Boa Vida, Condomínio 8, Casa 27B, Luanda, Angola
               </span>
             </li>
             <li className="flex items-center gap-3">
