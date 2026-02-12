@@ -39,7 +39,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     // Company WhatsApp number (without + or spaces)
-    const whatsappNumber = "244923951128";
+    const whatsappNumber = "244930515127";
 
     // Build the message with line breaks
     const message = `Olá, meu nome é ${formState.name}\n${formState.email}\n${formState.phone}\n\n${formState.message}`;
